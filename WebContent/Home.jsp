@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,49 +10,49 @@
         $(document).ready(function() {
 		var $banner = $("#banner").find("ul");
 
-		var $bannerWidth = $banner.children().outerWidth();//ÀÌ¹ÌÁöÀÇ Æø
-		var $bannerHeight = $banner.children().outerHeight(); // ³ôÀÌ
-		var $length = $banner.children().length;//ÀÌ¹ÌÁöÀÇ °¹¼ö
+		var $bannerWidth = $banner.children().outerWidth();//ì´ë¯¸ì§€ì˜ í­
+		var $bannerHeight = $banner.children().outerHeight(); // ë†’ì´
+		var $length = $banner.children().length;//ì´ë¯¸ì§€ì˜ ê°¯ìˆ˜
 		var rollingId;
 
-		//Á¤ÇØÁø ÃÊ¸¶´Ù ÇÔ¼ö ½ÇÇà
-		rollingId = setInterval(function() { rollingStart(); }, 3000);//´ÙÀ½ ÀÌ¹ÌÁö·Î ·Ñ¸µ ¾Ö´Ï¸ŞÀÌ¼Ç ÇÒ ½Ã°£Â÷
+		//ì •í•´ì§„ ì´ˆë§ˆë‹¤ í•¨ìˆ˜ ì‹¤í–‰
+		rollingId = setInterval(function() { rollingStart(); }, 3000);//ë‹¤ìŒ ì´ë¯¸ì§€ë¡œ ë¡¤ë§ ì• ë‹ˆë©”ì´ì…˜ í•  ì‹œê°„ì°¨
     
 		function rollingStart() {
 			$banner.css("width", $bannerWidth * $length + "px");
 			$banner.css("height", $bannerHeight + "px");
 			//alert(bannerHeight);
-			//¹è³ÊÀÇ ÁÂÃø À§Ä¡¸¦ ¿Å°Ü ÁØ´Ù.
-			$banner.animate({left: - $bannerWidth + "px"}, 1500, function() { //¼ıÀÚ´Â ·Ñ¸µ ÁøÇàµÇ´Â ½Ã°£ÀÌ´Ù.
-				//Ã¹¹øÂ° ÀÌ¹ÌÁö¸¦ ¸¶Áö¸· ³¡¿¡ º¹»ç(ÀÌµ¿ÀÌ ¾Æ´Ï¶ó º¹»ç)ÇØ¼­ Ãß°¡ÇÑ´Ù.
+			//ë°°ë„ˆì˜ ì¢Œì¸¡ ìœ„ì¹˜ë¥¼ ì˜®ê²¨ ì¤€ë‹¤.
+			$banner.animate({left: - $bannerWidth + "px"}, 1500, function() { //ìˆ«ìëŠ” ë¡¤ë§ ì§„í–‰ë˜ëŠ” ì‹œê°„ì´ë‹¤.
+				//ì²«ë²ˆì§¸ ì´ë¯¸ì§€ë¥¼ ë§ˆì§€ë§‰ ëì— ë³µì‚¬(ì´ë™ì´ ì•„ë‹ˆë¼ ë³µì‚¬)í•´ì„œ ì¶”ê°€í•œë‹¤.
 				$(this).append("<li>" + $(this).find("li:first").html() + "</li>");
-				//µÚ·Î º¹»çµÈ Ã¹¹øÀç ÀÌ¹ÌÁö´Â ÇÊ¿ä ¾øÀ¸´Ï »èÁ¦ÇÑ´Ù.
+				//ë’¤ë¡œ ë³µì‚¬ëœ ì²«ë²ˆì¬ ì´ë¯¸ì§€ëŠ” í•„ìš” ì—†ìœ¼ë‹ˆ ì‚­ì œí•œë‹¤.
 				$(this).find("li:first").remove();
-				//´ÙÀ½ ¿òÁ÷ÀÓÀ» À§ÇØ¼­ ¹è³Ê ÁÂÃøÀÇ À§Ä¡°ªÀ» ÃÊ±âÈ­ ÇÑ´Ù.
+				//ë‹¤ìŒ ì›€ì§ì„ì„ ìœ„í•´ì„œ ë°°ë„ˆ ì¢Œì¸¡ì˜ ìœ„ì¹˜ê°’ì„ ì´ˆê¸°í™” í•œë‹¤.
 				$(this).css("left", 0);
-				//ÀÌ °úÁ¤À» ¹İº¹ÇÏ¸é¼­ °è¼Ó ·Ñ¸µÇÏ´Â ¹è³Ê¸¦ ¸¸µé ¼ö ÀÖ´Ù.
+				//ì´ ê³¼ì •ì„ ë°˜ë³µí•˜ë©´ì„œ ê³„ì† ë¡¤ë§í•˜ëŠ” ë°°ë„ˆë¥¼ ë§Œë“¤ ìˆ˜ ìˆë‹¤.
 			});
 		}
         function clickRight(){
-            $banner.animate({left: - $bannerWidth + "px"}, 500, function() { //¼ıÀÚ´Â ·Ñ¸µ ÁøÇàµÇ´Â ½Ã°£ÀÌ´Ù.
-				//Ã¹¹øÂ° ÀÌ¹ÌÁö¸¦ ¸¶Áö¸· ³¡¿¡ º¹»ç(ÀÌµ¿ÀÌ ¾Æ´Ï¶ó º¹»ç)ÇØ¼­ Ãß°¡ÇÑ´Ù.
+            $banner.animate({left: - $bannerWidth + "px"}, 500, function() { //ìˆ«ìëŠ” ë¡¤ë§ ì§„í–‰ë˜ëŠ” ì‹œê°„ì´ë‹¤.
+				//ì²«ë²ˆì§¸ ì´ë¯¸ì§€ë¥¼ ë§ˆì§€ë§‰ ëì— ë³µì‚¬(ì´ë™ì´ ì•„ë‹ˆë¼ ë³µì‚¬)í•´ì„œ ì¶”ê°€í•œë‹¤.
 				$(this).append("<li>" + $(this).find("li:first").html() + "</li>");
-				//µÚ·Î º¹»çµÈ Ã¹¹øÀç ÀÌ¹ÌÁö´Â ÇÊ¿ä ¾øÀ¸´Ï »èÁ¦ÇÑ´Ù.
+				//ë’¤ë¡œ ë³µì‚¬ëœ ì²«ë²ˆì¬ ì´ë¯¸ì§€ëŠ” í•„ìš” ì—†ìœ¼ë‹ˆ ì‚­ì œí•œë‹¤.
 				$(this).find("li:first").remove();
-				//´ÙÀ½ ¿òÁ÷ÀÓÀ» À§ÇØ¼­ ¹è³Ê ÁÂÃøÀÇ À§Ä¡°ªÀ» ÃÊ±âÈ­ ÇÑ´Ù.
+				//ë‹¤ìŒ ì›€ì§ì„ì„ ìœ„í•´ì„œ ë°°ë„ˆ ì¢Œì¸¡ì˜ ìœ„ì¹˜ê°’ì„ ì´ˆê¸°í™” í•œë‹¤.
 				$(this).css("left", 0);
-				//ÀÌ °úÁ¤À» ¹İº¹ÇÏ¸é¼­ °è¼Ó ·Ñ¸µÇÏ´Â ¹è³Ê¸¦ ¸¸µé ¼ö ÀÖ´Ù.
+				//ì´ ê³¼ì •ì„ ë°˜ë³µí•˜ë©´ì„œ ê³„ì† ë¡¤ë§í•˜ëŠ” ë°°ë„ˆë¥¼ ë§Œë“¤ ìˆ˜ ìˆë‹¤.
 			});
         }
         function clickLeft(){
-            $banner.animate({left: + $bannerWidth + "px"}, 500, function() { //¼ıÀÚ´Â ·Ñ¸µ ÁøÇàµÇ´Â ½Ã°£ÀÌ´Ù.
-				//Ã¹¹øÂ° ÀÌ¹ÌÁö¸¦ ¸¶Áö¸· ³¡¿¡ º¹»ç(ÀÌµ¿ÀÌ ¾Æ´Ï¶ó º¹»ç)ÇØ¼­ Ãß°¡ÇÑ´Ù.
+            $banner.animate({left: + $bannerWidth + "px"}, 500, function() { //ìˆ«ìëŠ” ë¡¤ë§ ì§„í–‰ë˜ëŠ” ì‹œê°„ì´ë‹¤.
+				//ì²«ë²ˆì§¸ ì´ë¯¸ì§€ë¥¼ ë§ˆì§€ë§‰ ëì— ë³µì‚¬(ì´ë™ì´ ì•„ë‹ˆë¼ ë³µì‚¬)í•´ì„œ ì¶”ê°€í•œë‹¤.
 				$(this).prepend("<li>" + $(this).find("li:last").html() + "</li>");
-				//µÚ·Î º¹»çµÈ Ã¹¹øÀç ÀÌ¹ÌÁö´Â ÇÊ¿ä ¾øÀ¸´Ï »èÁ¦ÇÑ´Ù.
+				//ë’¤ë¡œ ë³µì‚¬ëœ ì²«ë²ˆì¬ ì´ë¯¸ì§€ëŠ” í•„ìš” ì—†ìœ¼ë‹ˆ ì‚­ì œí•œë‹¤.
 				$(this).find("li:last").remove();
-				//´ÙÀ½ ¿òÁ÷ÀÓÀ» À§ÇØ¼­ ¹è³Ê ÁÂÃøÀÇ À§Ä¡°ªÀ» ÃÊ±âÈ­ ÇÑ´Ù.
+				//ë‹¤ìŒ ì›€ì§ì„ì„ ìœ„í•´ì„œ ë°°ë„ˆ ì¢Œì¸¡ì˜ ìœ„ì¹˜ê°’ì„ ì´ˆê¸°í™” í•œë‹¤.
 				$(this).css("left", 0);
-				//ÀÌ °úÁ¤À» ¹İº¹ÇÏ¸é¼­ °è¼Ó ·Ñ¸µÇÏ´Â ¹è³Ê¸¦ ¸¸µé ¼ö ÀÖ´Ù.
+				//ì´ ê³¼ì •ì„ ë°˜ë³µí•˜ë©´ì„œ ê³„ì† ë¡¤ë§í•˜ëŠ” ë°°ë„ˆë¥¼ ë§Œë“¤ ìˆ˜ ìˆë‹¤.
 			});
         }
         $("#imgLeft").click(clickLeft);
@@ -182,32 +182,32 @@
             <img src="img/logo.png" alt="">
             <ul>
                 <li>
-                    <a href="#">»óÁ¡</a>
+                    <a href="#">ìƒì </a>
                     <ul>
-                        <li><a href="#">ÁÖÁ¦º°</a></li>
-                        <li><a href="#">±İ¾×º°</a></li>
-                        <li><a href="#">ÀÎ±â¼ø</a></li>
-                        <li><a href="#">ÃÖ½Å¼ø</a></li>
+                        <li><a href="#">ì£¼ì œë³„</a></li>
+                        <li><a href="#">ê¸ˆì•¡ë³„</a></li>
+                        <li><a href="#">ì¸ê¸°ìˆœ</a></li>
+                        <li><a href="#">ìµœì‹ ìˆœ</a></li>
                     </ul>
                 </li>
-                <li><a href="#">¶óÀÌºê·¯¸®</a></li>
+                <li><a href="#">ë¼ì´ë¸ŒëŸ¬ë¦¬</a></li>
                 <li>
-                    <a href="#">°Ô½ÃÆÇ</a>
+                    <a href="#">ê²Œì‹œíŒ</a>
                     <ul>
-                        <li><a href="#">ÀÚÀ¯°Ô½ÃÆÇ</a></li>
-                        <li><a href="#">ÀÚ·á°Ô½ÃÆÇ</a></li>
+                        <li><a href="#">ììœ ê²Œì‹œíŒ</a></li>
+                        <li><a href="#">ìë£Œê²Œì‹œíŒ</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">°í°´Áö¿ø</a>
+                    <a href="#">ê³ ê°ì§€ì›</a>
                     <ul>
                         <li><a href="#">FnQ</a></li>
                         <li><a href="#">QnA</a></li>
                     </ul>
                 </li>
                 <div id="join">
-                    <span><a href="#">·Î±×ÀÎ</a></span>
-                    <span><a href="#">È¸¿ø°¡ÀÔ</a></span>
+                    <span><a href="#">ë¡œê·¸ì¸</a></span>
+                    <span><a href="#">íšŒì›ê°€ì…</a></span>
                 </div>
             </ul>
         </div>
