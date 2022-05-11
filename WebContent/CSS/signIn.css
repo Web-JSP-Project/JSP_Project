@@ -1,0 +1,48 @@
+#txtBox{
+	background-color: red;
+	width : 314px;
+  height: 280px;
+  position: relative;
+   
+}
+#login{
+  width : 258px;
+  height: 190px;
+  background-color: skyblue;
+  position: absolute;
+  top: 44%;
+  left: 25%;
+  margin: -50px 0 0 -50px;
+}
+
+#txtBox #logText{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+ }
+#login input{
+		width : 250px;
+		height: 25px;
+}
+#login label{
+	font-weight: bold;
+	font-size: medium;
+
+}
+#login #logBtn{
+    width: 250px;
+    height: 40px;
+   	background-color:green;
+    
+}
+#joinBox{
+    background-color: pink;
+    width: 314px;
+    height: 40px;
+    text-align: center;
+    padding : 12px 0;
+}
+#joinBox a{
+ 		 font-weight: bold;
+		 
+}

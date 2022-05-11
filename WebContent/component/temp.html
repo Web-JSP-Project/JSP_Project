@@ -6,228 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #postBox  table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-#postBox section.notice {
-  padding: 80px 0;
-}
-
-#postBox #board-search .search-window {
-  padding: 15px 0;
-  background-color: #f9f7f9;
-}
-#postBox #board-search .search-window .search-wrap {
-  position: relative;
-/*   padding-right: 124px; */
-  margin: 0 auto;
-  width: 80%;
-  max-width: 564px;
-}
-#postBox #board-search .search-window .search-wrap input {
-  height: 40px;
-  width: 100%;
-  font-size: 14px;
-  padding: 7px 14px;
-  border: 1px solid #ccc;
-}
-#postBox #board-search .search-window .search-wrap input:focus {
-  border-color: #333;
-  outline: 0;
-  border-width: 1px;
-}
-#postBox #board-search .search-window .search-wrap .btn {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 108px;
-  padding: 0;
-  font-size: 16px;
-}
-
-#postBox .board-table {
-  font-size: 13px;
-  width: 100%;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-}
-
-#postBox .board-table a {
-  color: #333;
-  display: inline-block;
-  line-height: 1.4;
-  word-break: break-all;
-  vertical-align: middle;
-}
-#postBox .board-table a:hover {
-  text-decoration: underline;
-}
-#postBox .board-table th {
-  text-align: center;
-}
-
-#postBox .board-table .th-num {
-  width: 100px;
-  text-align: center;
-}
-
-#postBox .board-table .th-date {
-  width: 200px;
-}
-
-#postBox .board-table th, .board-table td {
-  padding: 14px 0;
-}
-
-#postBox .board-table tbody td {
-  border-top: 1px solid #e7e7e7;
-  text-align: center;
-}
-
-#postBox .board-table tbody th {
-  padding-left: 28px;
-  padding-right: 14px;
-  border-top: 1px solid #e7e7e7;
-  text-align: left;
-}
-
-#postBox .board-table tbody th p{
-  display: none;
-}
-
-#postBox .btn {
-  display: inline-block;
-  padding: 0 30px;
-  font-size: 15px;
-  font-weight: 400;
-  background: transparent;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border: 1px solid transparent;
-  text-transform: uppercase;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-#postBox .btn-dark {
-  background: #555;
-  color: #fff;
-}
-
-#postBox .btn-dark:hover, .btn-dark:focus {
-  background: #373737;
-  border-color: #373737;
-  color: #fff;
-}
-
-#postBox .btn-dark {
-  background: #555;
-  color: #fff;
-}
-
-#postBox .btn-dark:hover, .btn-dark:focus {
-  background: #373737;
-  border-color: #373737;
-  color: #fff;
-}
-
-/* reset */
-
-#postBox * {
-  list-style: none;
-  text-decoration: none;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-#postBox .clearfix:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-#postBox .blind {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  margin: -1px;
-  width: 1px;
-  height: 1px;
-}
-
+        #joinBox{
+            background-color: blanchedalmond;
+            border-radius: 0.5px;
+            border-color: blanchedalmond;
+            width: 350px;
+            height: 420px;
+        }
+        #joinBox #Jtxt{
+            text-align: center;
+            font-size: xx-large;
+            font-weight: bold;   
+        }
+        #joinBox label{
+            font-size: large;
+            font-weight: bold;
+        }
+        #joinBox input{
+            height: 21px;
+        }
+        #joinBox #joinBtn{
+            margin-left: 105px;
+            height: 35px;
+            width: 120px;
+        }
     </style>
 </head>
 <body>
-    <div id="postBox">
-        <section class="notice">
-            <!-- board seach area -->
-            <div id="board-search">
-                <div class="container">
-                    <div class="search-window">
-                        <form action="">
-                            <div class="search-wrap">
-                                <label for="search" class="blind">공지사항 내용 검색</label>
-                                <input id="search" type="search" name="" placeholder="검색어를 입력해주세요." value="">
-                                <button type="submit" class="btn btn-dark">검색</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-             
-            <!-- board list area -->
-            <div id="board-list">
-                <div class="container">
-                    <table class="board-table">
-                        <thead>
-                            <tr>
-                                <th scope="col" class="th-num">번호</th>
-                                <th scope="col" class="th-title">제목</th>
-                                <th scope="col" class="th-date">등록일</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>3</td>
-                                <th>
-                                    <a href="#!">[공지사항] 개인정보 처리방침 변경안내처리방침</a>
-                                    <p>테스트</p>
-                                </th>
-                                <td>2017.07.13</td>
-                            </tr>
-        
-                            <tr>
-                                <td>2</td>
-                                <th><a href="#!">공지사항 안내입니다. 이용해주셔서 감사합니다</a></th>
-                                <td>2017.06.15</td>
-                            </tr>
-            
-                            <tr>
-                                <td>1</td>
-                                <th><a href="#!">공지사항 안내입니다. 이용해주셔서 감사합니다</a></th>
-                                <td>2017.06.15</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
+    <div id="joinBox">
+        <p id="Jtxt">회원 가입</p>
+        <pre>
+
+         <label for="joinid">아이디</label>
+         <input type="text" id="joinid">  <button>중복 확인</button>
+
+         <label for="joinpwd">비밀번호</label>
+         <input type="password" id="joinpwd">
+            특수문자 1개 이상 
+            넣어야 합니다.
+
+         <label for="joinpwdck">비밀번호확인</label>
+         <input type="password" id="joinpwdck">
+
+         <label for="joinEmail">이메일</label>
+         <input type="text" id="joinEmail">      
+        </pre>
+        <button id ="joinBtn">회원 가입  </button>
     </div>
 </body>
 </html>

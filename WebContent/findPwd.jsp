@@ -7,8 +7,7 @@
 <title>Insert title here</title>
     <link rel="stylesheet" href="./CSS/DropdownMenu.css">
     <link rel="stylesheet" href="./CSS/member.css">
-    <link rel="stylesheet" href="./CSS/subBar.css">
-    <link rel="stylesheet" href="./CSS/b	oard.css">
+    <link rel="stylesheet" href="./CSS/findPwd.css">
     <style>
         body{
             background-color: #c0c6c7;
@@ -21,24 +20,19 @@
         }
         #main{
             margin: 50px 100px;
-        }
-        #content{
-            float: right;
+            display: flex;
+            justify-content: center;
         }
     </style>
 </head>
 <body>
+
     <div id="header">
 	    <%@include file="component/DropdownMenu.jsp" %>
         <%@include file="component/member.jsp"%>
     </div>
     <div id="main">
-        <%@include file="component/subBarStore.jsp"%>
-        <div id="content">
-            <%@include file="component/board.jsp" %>
-        </div>
-
+        <%@include file="component/findPwd.jsp"%>
     </div>
-
 </body>
 </html>
