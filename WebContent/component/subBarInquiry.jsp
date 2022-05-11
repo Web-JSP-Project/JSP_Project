@@ -5,7 +5,7 @@
             <input type="text" placeholder="Search...">
         </div>
         <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Q&A</a></li>
+            <li><a href="inquiry.jsp">FAQ</a></li>
+            <li><a href="inquiry.jsp">Q&A</a></li>
         </ul>
     </div>

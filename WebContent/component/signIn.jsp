@@ -12,5 +12,5 @@
             </div>
     </div> 
     <div id =joinBox>
-    아이디가 없다면<a href="">회원가입</a>
+    아이디가 없다면<a href="signUp.jsp">회원가입</a>
     </div>

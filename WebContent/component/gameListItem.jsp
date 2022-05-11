@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <div class="gameListItem">
-        <a href="#">
+        <a href="gameInfomation.jsp">
             <div class="gameImg">
                 <img src="./img/gameList/1.jpg" alt="">
             </div>

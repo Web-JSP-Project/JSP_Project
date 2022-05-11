@@ -6,15 +6,15 @@
     </div>
     <div id="imgMain">
         <div class="imgContent">
-            <a href="#"><img src="./img/banner/bannerConetent1.png" alt=""></a>
+            <a href="gameInfomation.jsp"><img src="./img/banner/bannerConetent1.png" alt=""></a>
             <div class="price">10,000원</div>
         </div>
         <div class="imgContent">
-            <a href="#"><img src="./img/banner/bannerConetent2.png" alt=""></a>
+            <a href="gameInfomation.jsp"><img src="./img/banner/bannerConetent2.png" alt=""></a>
             <div class="price">10,000원</div>
         </div>
         <div class="imgContent">
-            <a href="#"><img src="./img/banner/bannerConetent3.png" alt=""></a>
+            <a href="gameInfomation.jsp"><img src="./img/banner/bannerConetent3.png" alt=""></a>
             <div class="price">10,000원</div>
         </div>
     </div>

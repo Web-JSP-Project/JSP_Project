@@ -33,7 +33,7 @@
         <%@include file="component/member.jsp"%>
     </div>
     <div id="main">
-        <%@include file="component/subBarStore.jsp"%>
+        <%@include file="component/subBarBoard.jsp"%>
         <div id="content">
             <%@include file="component/board.jsp" %>
         </div>
