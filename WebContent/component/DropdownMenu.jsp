@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <div id="dropDownMenu">
     <ul>
-        <li><a href="#"><img src="./img/logo.png" alt=""></a></li>
+        <li style="width: 162px;"><a href="#"><img src="./img/logo.png" alt=""></a></li>
         <li><a href="#">상점</a>
             <ul>
                 <li><a href="#">주제별</a></li>

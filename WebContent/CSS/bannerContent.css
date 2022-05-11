@@ -1,0 +1,56 @@
+body{
+            background-color: gray;
+        }
+        #bannerList{
+            width: 1100px;
+        }
+        #bannerList #imgMain{
+            display: inline-block;
+            margin-left: 30px;
+            padding: 10px 35px;
+        }
+        #bannerList #imgMain .imgContent{
+            display: inline-block;
+        }
+        #bannerList #imgMain img{
+            width: 300px;
+        }
+        #bannerList .price{
+            font-size: 30px;
+            height: 50px;
+            border: 1px solid;
+            text-align: center;
+            line-height: 50px;
+        }
+        #bannerList #index{
+            text-align: center;
+        }
+        #bannerList #index .n{
+            width: 30px;
+            height: 10px;
+            background-color: hsla(202,60%,100%,0.2);
+            display: inline-block;
+            margin: 10px 5px;
+            border-radius: 2px;
+        }
+        #bannerList #index .focus{
+            background-color:hsla(202,60%,100%,0.4);
+            width: 30px;
+            height: 10px;
+            display: inline-block;
+            margin: 10px 5px;
+            border-radius: 2px;
+        }
+        #bannerList .arrow{
+            width: 30px;
+        }
+        #bannerList .arrow img{
+            width: 30px;
+            margin: 100px 0;
+        }
+        #bannerList #right{
+            float: right;
+        }
+        #bannerList #left{
+            float: left;
+        }
