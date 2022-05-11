@@ -1,0 +1,27 @@
+        .gameListItem{
+            width: 800px;
+            margin-bottom: 20px;
+        }
+        .gameListItem a{
+            display: block;
+            background-color: gray;
+            text-decoration: none;
+            color: wheat;
+        }
+        .gameListItem .gameImg{
+            display: inline-block;
+        }
+        .gameListItem .gameListData{
+            display: inline-block;
+            width: 600px;
+            font-size: 16px;
+            font-weight: bold;
+            position: relative;
+            top: -20px;
+        }
+        .gameListItem .gameName{
+            display: inline-block;
+        }
+        .gameListItem .gamePrice{
+            float: right;
+        }

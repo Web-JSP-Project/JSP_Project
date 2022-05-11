@@ -1,17 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<title>Insert title here</title>
     <link rel="stylesheet" href="./CSS/DropdownMenu.css">
     <link rel="stylesheet" href="./CSS/member.css">
     <link rel="stylesheet" href="./CSS/subBar.css">
-    <link rel="stylesheet" href="./CSS/banner.css">
-    <link rel="stylesheet" href="./CSS/bannerContent.css">
+    <link rel="stylesheet" href="./CSS/gameContentFrame.css">
     <style>
         body{
             background-color: #c0c6c7;
@@ -31,6 +28,7 @@
     </style>
 </head>
 <body>
+
     <div id="header">
 	    <%@include file="component/DropdownMenu.jsp" %>
         <%@include file="component/member.jsp"%>
@@ -38,8 +36,7 @@
     <div id="main">
         <%@include file="component/subBarStore.jsp"%>
         <div id="content">
-            <%@include file="component/banner.jsp" %>
-            <%@include file="component/bannerContent.jsp" %>
+        	<%@include file="component/gameContentFrame.jsp"%>
         </div>
 
     </div>

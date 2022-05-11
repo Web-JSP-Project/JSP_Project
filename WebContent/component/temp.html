@@ -6,94 +6,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            background-color: gray;
-        }
-        #bannerList{
-            width: 1100px;
-        }
-        #bannerList #imgMain{
-            display: inline-block;
-            margin-left: 30px;
-            padding: 10px 35px;
-        }
-        #bannerList #imgMain .imgContent{
-            display: inline-block;
-        }
-        #bannerList #imgMain img{
-            width: 300px;
-        }
-        #bannerList .price{
-            font-size: 30px;
-            height: 50px;
-            border: 1px solid;
-            text-align: center;
-            line-height: 50px;
-        }
-        #bannerList #index{
-            text-align: center;
-        }
-        #bannerList #index .n{
-            width: 30px;
-            height: 10px;
-            background-color: hsla(202,60%,100%,0.2);
-            display: inline-block;
-            margin: 10px 5px;
-            border-radius: 2px;
-        }
-        #bannerList #index .focus{
-            background-color:hsla(202,60%,100%,0.4);
-            width: 30px;
-            height: 10px;
-            display: inline-block;
-            margin: 10px 5px;
-            border-radius: 2px;
-        }
-        #bannerList .arrow{
-            width: 30px;
-        }
-        #bannerList .arrow img{
-            width: 30px;
-            margin: 100px 0;
-        }
-        #bannerList #right{
-            float: right;
-        }
-        #bannerList #left{
-            float: left;
-        }
+        #qnaBox .layout{
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    #qnaBox .qna{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 600px;
+        background-color: #EAEAEA;
+    }
+    #qnaBox .qna > li{
+      padding: 10px 0;
+      box-sizing: border-box;
+    }
+    #qnaBox .qna > li:nth-child(n+2){ /* 아이템 구분 점선 */
+      border-top: 1px dashed #aaa;
+    }
+    #qnaBox .qna input {
+      display: none;
+    }
+    
+    #qnaBox .qna label { /* 제목 - 클릭 영역 */
+      font-weight: bold;
+      color: #000;
+      margin: 20px 0 0;
+      cursor: pointer;
+    }
+    #qnaBox  .qna label::before { /* 제목 앞 화살표 */
+      display: block;
+      content: "";
+      width: 0;
+      height: 0;
+      border: 8px solid transparent;
+      border-left: 8px solid rgb(125, 106, 221);
+      margin: 2px 0 0 8px;
+      float: left;
+    }
+    #qnaBox  .qna input:checked + label::before { /* 내용 펼침 상태 제목 앞 화살표 */
+      border: 8px solid transparent;
+      border-top: 8px solid rgb(125, 106, 221);
+      border-bottom: 0;
+      margin: 8px 4px 0;
+    }
+    
+    #qnaBox  .qna div { /* 내용 영역 - 기본 감춤 상태 */
+      display: none;
+      color: #666;
+      font-size: 0.9375em;
+      overflow: hidden;
+      padding: 10px 0 10px 30px;
+      box-sizing: border-box;
+      transition: max-height 0.4s;
+    }
+    #qnaBox .qna input:checked + label + div { /* 내용 영역 펼침 */
+      display: block;
+    }
     </style>
 </head>
 <body>
-    
-<div id="bannerList">
-    <div id="left" class="arrow">
-        <img src="../img/banner/left.png" alt="">
+    <div id="qnaBox">
+        <ul class="qna">
+            <li>
+                <input type="checkbox" id="qna-1">
+                <label for="qna-1">환불은 어떻게 하나요?</label>
+                <div>
+                    <p>고객센터>기타문의>환불을 누르시고 가지고 있는 게임을 선택하시고 환불 신청을 하시면 됩니다.</p>
+                    <p>환불은 구매후 2주안에 환불해야 하며 플레이 타임은 2시간이 넘으면 환불이 안됩니다.</p>
+                </div>
+            </li>
+            <li>
+                <input type="checkbox" id="qna-2">
+                <label for="qna-2">등록한 환불계좌를 등록/변경하고 싶어요.</label>
+                <div>
+                    <p>마이페이지에서 환불계좌 등록 및 수정이 가능합니다. 환불계좌는 주문자 명의의 본인 계좌만 등록할 수 있습니다.</p>
+                    <p>주문 진행 상태가 '환불진행중' 또는 '환불완료' 에서는 환불계좌를 변경할 수 없습니다.</p>
+                </div>
+            </li>
+            <li>
+                <input type="checkbox" id="qna-3">
+                <label for="qna-3">반품 신청을 철회하고 싶어요.</label>
+                <div>
+                    <p>반품신청 철회는 판품 신청 후 3일안에 철회 할수 있습니다.</p>
+                </div>
+            </li>
+            <li>
+                <input type="checkbox" id="qna-4">
+                <label for="qna-4">게임이 다운로드가 안된다면 어떻게 해야 하나요?</label>
+                <div>
+                    <p> 게임이 다운로드가 안된다면 먼저 드라이브에 있는 용량을 확인해 주세요</p>
+                    <p> 그래도 다운이 안된다면 최소사향을 확인해 주세요</p>
+                </div>
+            </li>
+            <li>
+                <input type="checkbox" id="qna-5">
+                <label for="qna-5">게임에 대해서 문의하려면 어떻게 해야 하나요?</label>
+                <div>
+                    <p>게임에 관한 내용은 상품상세 화면에 자세히 안내되어 있습니다. 마이페이지 > 주문내역에서 주문한 상품을 선택하면 상세페이지로 이동합니다.</p>
+                    <p>게임 상세 내용에 표시되어 있지 않은 내용은 판매자에게 문의해 주십시오.</p>
+                    <p>> 판매자에게 문의</p>
+                    <p>1. "마이페이지 > 주문내역에서 상품 선택 > 안내"에 표기된 판매자 연락처로 문의</p>
+                    <p>2. "["마이페이지 > 1:1문의하기 > 문읜타입에서 판매자에게 문의하기"를 선택한 후 질의 내용 작성</p>
+                </div>
+            </li>
+        </ul>
     </div>
-    <div id="imgMain">
-        <div class="imgContent">
-            <a href="#"><img src="../img/banner/2.png" alt=""></a>
-            <div class="price">10,000원</div>
-        </div>
-        <div class="imgContent">
-            <a href="#"><img src="../img/banner/3.png" alt=""></a>
-            <div class="price">10,000원</div>
-        </div>
-        <div class="imgContent">
-            <a href="#"><img src="../img/banner/4.png" alt=""></a>
-            <div class="price">10,000원</div>
-        </div>
-    </div>
-    <div id="right" class="arrow">
-        <img src="../img/banner/right.png" alt="">
-    </div>
-    <div id="index">
-        <div class="focus"></div>
-        <div class="n"></div>
-        <div class="n"></div>
-        <div class="n"></div>
-        <div class="n"></div>
-    </div>
-</div>
 </body>
 </html>
