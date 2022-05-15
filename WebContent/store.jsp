@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./CSS/gameListItem.css">
     <style>
     
-    body{
+        body{
             background-color: #c0c6c7;
         }
         #header{
@@ -36,7 +36,7 @@
     </div>
     
     <div id="main">
-        <%@include file="component/subBarStore.jsp"%>
+        <%@include file="component/subBar.jsp"%>
         <div id="content">
         	<%@include file="component/gameListItem.jsp"%>
         	<%@include file="component/gameListItem.jsp"%>
