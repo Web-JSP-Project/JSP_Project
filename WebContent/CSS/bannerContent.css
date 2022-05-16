@@ -1,6 +1,4 @@
-body{
-            background-color: gray;
-        }
+
         #bannerList{
             width: 1100px;
         }
@@ -18,9 +16,10 @@ body{
         #bannerList .price{
             font-size: 30px;
             height: 50px;
-            border: 1px solid;
+            border: 1px solid gray;
             text-align: center;
             line-height: 50px;
+            color: white;
         }
         #bannerList #index{
             text-align: center;

@@ -19,8 +19,9 @@
         #subBar{
             float:left;
             width: 190px;
-            background-color: #828789; 
+            background-color: #555556; 
             font:bold 16px "malgun gothic";
+            padding-left:20px;
         }
         #subBar ul{
             list-style:none;
@@ -30,6 +31,8 @@
             text-align:center;
             height: 300px;
             padding-left: 15px;
+        margin-top:20px;
+            
         }
         #subBar ul li a{
             text-decoration:none;
@@ -41,7 +44,7 @@
         }
         #subBar li{
             width:80px;
-            background-color:#828789;
+   
         }
         #subBar ul ul{
             display:none;

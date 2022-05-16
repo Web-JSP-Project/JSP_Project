@@ -5,14 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+    <link rel="stylesheet" href="./CSS/body.css">
     <link rel="stylesheet" href="./CSS/DropdownMenu.css">
     <link rel="stylesheet" href="./CSS/member.css">
     <link rel="stylesheet" href="./CSS/subBar.css">
     <link rel="stylesheet" href="./CSS/gameContentFrame.css">
     <style>
-        body{
-            background-color: #c0c6c7;
-        }
         #header{
             height: 50px;
             background-color: #171a21;

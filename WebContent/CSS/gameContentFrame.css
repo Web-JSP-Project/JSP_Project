@@ -12,7 +12,11 @@
             float: right;
         }
         #gameContentFrame #payInfomation{
-            height: 30px;
+            height: 50px;
+            color: white;
+        }
+        #gameContentFrame #gameContent{
+        	color:white;
         }
         #gameContentFrame #gameName{
             float: left;

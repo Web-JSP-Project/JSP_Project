@@ -30,52 +30,52 @@
             </tr>
         </thead>
         <tbody>
-            <tr onClick=location.href="#">
+            <tr onClick=location.href="boardItem.jsp">
                 <td class="title">제목1</td>
                 <td class="name">닉네임</td>
                 <td class="name">날짜</td>
             </tr>
-            <tr onClick=location.href="#">
+            <tr onClick=location.href="boardItem.jsp">
                 <td class="title">제목2</td>
                 <td class="name">닉네임</td>
                 <td class="name">날짜</td>
             </tr>
-            <tr onClick=location.href="#">
+            <tr onClick=location.href="boardItem.jsp">
                 <td class="title">제목3</td>
                 <td class="name">닉네임</td>
                 <td class="name">날짜</td>
             </tr>
-            <tr onClick=location.href="#">
+            <tr onClick=location.href="boardItem.jsp">
                 <td class="title">제목4</td>
                 <td class="name">닉네임</td>
                 <td class="name">날짜</td>
             </tr>
-            <tr onClick=location.href="#">
+            <tr onClick=location.href="boardItem.jsp">
                 <td class="title">제목5</td>
                 <td class="name">닉네임</td>
                 <td class="name">날짜</td>
             </tr>
-            <tr onClick=location.href="#">
+            <tr onClick=location.href="boardItem.jsp">
                 <td class="title">제목6</td>
                 <td class="name">닉네임</td>
                 <td class="name">날짜</td>
             </tr>
-            <tr onClick=location.href="#">
+            <tr onClick=location.href="boardItem.jsp">
                 <td class="title">제목7</td>
                 <td class="name">닉네임</td>
                 <td class="name">날짜</td>
             </tr>
-            <tr onClick=location.href="#">
+            <tr onClick=location.href="boardItem.jsp">
                 <td class="title">제목8</td>
                 <td class="name">닉네임</td>
                 <td class="name">날짜</td>
             </tr>
-            <tr onClick=location.href="#">
+            <tr onClick=location.href="boardItem.jsp">
                 <td class="title">제목9</td>
                 <td class="name">닉네임</td>
                 <td class="name">날짜</td>
             </tr>
-            <tr onClick=location.href="#">
+            <tr onClick=location.href="boardItem.jsp">
                 <td class="title">제목10</td>
                 <td class="name">닉네임</td>
                 <td class="name">날짜</td>

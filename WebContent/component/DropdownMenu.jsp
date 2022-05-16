@@ -12,10 +12,10 @@
             </ul>
         </li>
         <li><a href="#">라이브러리</a></li>
-        <li><a href="board.jsp">게시판</a>
+        <li><a href="boardList.jsp">게시판</a>
             <ul>
-                <li><a href="board.jsp">자유게시판</a></li>
-                <li><a href="board.jsp">자료게시판</a></li>
+                <li><a href="boardList.jsp">자유게시판</a></li>
+                <li><a href="boardList.jsp">자료게시판</a></li>
             </ul>
         </li>
         <li><a href="inquiry.jsp">고객지원</a>

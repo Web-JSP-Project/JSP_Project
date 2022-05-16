@@ -43,7 +43,7 @@ menu박스 가운데정렬, 글자가운데 정렬 */
 		background: #171a21;
 	}
     #dropDownMenu ul li:hover ul {
-		display:block;
+		display: block;
 	}
         
 
