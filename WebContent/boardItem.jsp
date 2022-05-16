@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="./CSS/DropdownMenu.css">
     <link rel="stylesheet" href="./CSS/member.css">
     <link rel="stylesheet" href="./CSS/subBar.css">
-    <link rel="stylesheet" href="./CSS/gameListItem.css">
-    <style>
-    
+    <link rel="stylesheet" href="./CSS/boardItem.css">
+<style>
+
         body{
             background-color: #c0c6c7;
         }
@@ -23,10 +23,11 @@
         #main{
             margin: 50px 100px;
         }
-        #content{
+        #content #boardItem{
+        	width: 1050px;
             float: right;
         }
-    </style>
+</style>
 </head>
 <body>
 
@@ -34,15 +35,13 @@
 	    <%@include file="component/DropdownMenu.jsp" %>
         <%@include file="component/member.jsp"%>
     </div>
-    
     <div id="main">
-        <%@include file="component/subBarStore.jsp"%>
+        <%@include file="component/subBarBoard.jsp"%>
         <div id="content">
-        	<%@include file="component/gameListItem.jsp"%>
-        	<%@include file="component/gameListItem.jsp"%>
-        	<%@include file="component/gameListItem.jsp"%>
+            <%@include file="component/boardItem.jsp" %>
         </div>
 
     </div>
+
 </body>
 </html>

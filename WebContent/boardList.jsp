@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./CSS/DropdownMenu.css">
     <link rel="stylesheet" href="./CSS/member.css">
     <link rel="stylesheet" href="./CSS/subBar.css">
-    <link rel="stylesheet" href="./CSS/b	oard.css">
+    <link rel="stylesheet" href="./CSS/boardList.css">
     <style>
         body{
             background-color: #c0c6c7;
@@ -22,7 +22,8 @@
         #main{
             margin: 50px 100px;
         }
-        #content{
+        #content #boardList{
+        	width: 1050px;
             float: right;
         }
     </style>
@@ -35,7 +36,7 @@
     <div id="main">
         <%@include file="component/subBarBoard.jsp"%>
         <div id="content">
-            <%@include file="component/board.jsp" %>
+            <%@include file="component/boardList.jsp" %>
         </div>
 
     </div>

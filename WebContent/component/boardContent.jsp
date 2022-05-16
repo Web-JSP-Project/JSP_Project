@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<div id="boardContent">
     <div id="boardTitle">
         <h1>자유게시판</h1>
     </div>
@@ -23,4 +24,5 @@
         <div id="content">
             <p>글 내용입니다</p>
         </div>
+    </div>
     </div>

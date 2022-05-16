@@ -1,0 +1,22 @@
+
+        #boardItem{
+            border: 1px solid;
+        	width: 1050px;
+            float: right;
+        }
+        #boardItem #boardTitle{
+            font-size: 30px;
+        }
+        #boardItem #boardInfomation{
+            height: 30px;
+        }
+        #boardItem #infomationLeft{
+            float: left;
+        }
+        #boardItem #infomationRight{
+            float: right;
+        }
+        #boardItem #boardContent{
+            min-height: 300px;
+        }
+    

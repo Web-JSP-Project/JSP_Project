@@ -5,7 +5,7 @@
         <img src="./img/banner/left.png" alt="">
     </div>
     <div id="imgMain">
-        <a href="gameInfomation.jsp"><img src="./img/banner/2.png" alt=""></a>
+        <a href="gameInfomation.jsp"><img src="./img/banner/6.png" alt=""></a>
     </div>
     <div id="right" class="arrow">
         <img src="./img/banner/right.png" alt="">

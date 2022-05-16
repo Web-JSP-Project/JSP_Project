@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./CSS/bannerContent.css">
     <style>
         body{
-            background-color: #c0c6c7;
+            background-color: #343434;
         }
         #header{
             height: 50px;
