@@ -1,0 +1,20 @@
+        #commentInsert{
+            width: 1090px;
+            height: 150px;
+        }
+        #commentInsert #commentInsertContent textarea{
+            width: 930px;
+            height: 100px;
+            resize: none;
+            padding:10px;
+        }
+        #commentInsert #commentInsertBtn button{
+            height: 120px;
+            width: 120px;
+        }
+        #commentInsert #commentInsertContent{
+            float: left;
+        }
+        #commentInsert #commentInsertBtn{
+            float: right;
+        }

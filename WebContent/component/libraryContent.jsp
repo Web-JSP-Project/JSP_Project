@@ -1,62 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        #libraryContent{
-            width: 1050px;
-            height: 700px;
-            background-color: gray;
-        }
-        #libraryContent #libImg img{
-            width: 1050px;
-            height: 300px;
-        }
-        #libraryContent #libInfomation{
-            padding: 10px;
-            margin-bottom: 30px;
-        }
-        #libraryContent .info{
-            width: 250px;
-            display: inline-block;
-        }
-        #libraryContent .info span{
-            text-align: center;
-            display: block;
-        }
-        #libraryContent .spanTop{
-            margin-bottom: 30px;
-        }
-        #libraryContent #specification .specification{
-            background-color: lightgray;
-            width: 450px;
-            padding: 10px;
-        }
-        #libraryContent #specification .specification .details p span{
-            font-weight: bold;
-            margin-right: 10px;
-        }
-        #libraryContent #minSpecification{
-            float: left;
-            margin-left: 30px;
-        }
-        #libraryContent #recommendSpecification{
-            float: right;
-            margin-right: 30px;
-        }
-        #libraryContent #downloadBtn button{
-            width: 200px;
-            height: 80px;
-        }
-    </style>
-</head>
-<body>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     <div id="libraryContent">
         <div id="libImg">
-            <img src="../img/banner/3.png" alt="">
+            <img src="./img/banner/3.png" alt="">
         </div>
         <div id="libInfomation">
             <div id="downloadBtn" class="info">
@@ -98,5 +44,3 @@
             </div>
         </div>
     </div>
-</body>
-</html>

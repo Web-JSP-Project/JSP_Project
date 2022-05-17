@@ -11,7 +11,7 @@
                 <li><a href="store.jsp">최신순</a></li>
             </ul>
         </li>
-        <li><a href="#">라이브러리</a></li>
+        <li><a href="library.jsp">라이브러리</a></li>
         <li><a href="boardList.jsp">게시판</a>
             <ul>
                 <li><a href="boardList.jsp">자유게시판</a></li>

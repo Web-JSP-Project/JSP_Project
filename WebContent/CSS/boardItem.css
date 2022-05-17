@@ -1,8 +1,10 @@
 
         #boardItem{
             border: 1px solid #aaa;
-        	width: 80px;
+        	width: 1050px;
             float: right;
+            color:white;
+            padding:20px;
         }
         #boardItem #boardTitle{
             font-size: 30px;

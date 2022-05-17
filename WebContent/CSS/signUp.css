@@ -16,7 +16,7 @@
         #signUp .signInput input{
             height: 35px;
             width: 96%;
-            border:1px solid green;
+            border:1px solid white;
             border-radius: 3px;
             padding:0 10px;
         }

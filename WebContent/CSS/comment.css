@@ -1,0 +1,39 @@
+        .comment{
+            width: 1090px;
+            background-color: gray;
+            margin-bottom:20px;
+        }
+        .comment .userInfomation{
+            height: 25px;
+            margin-bottom: 0px;
+        }
+        .comment .userInfomationText{
+            width: 1050px;
+            display: inline-block;
+            line-height: 25px;
+        }
+        .comment .userImg{
+            width: 25px;
+            height: 25px;
+            border-radius: 70%;
+            overflow: hidden;
+            display: inline-block;
+        }
+        .comment .userImg img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .comment .userNickName{
+            float: left;
+            font-weight: bold;
+        }
+        .comment .commentDate{
+            float:right;
+            font-size: 15px;
+            color: lightgray;
+        }
+        .comment .commentContent{
+            padding: 20px;
+            padding-bottom: 30px;
+        }
