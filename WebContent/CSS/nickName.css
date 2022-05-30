@@ -1,0 +1,85 @@
+
+  /* 글자크기를 16px 맑은 고딕 굵게하고 width넓이 700, 높이 50만큼 배경색은 #ccc, 글자색은 검정색, 라인높이50px
+  menu박스 가운데정렬, 글자가운데 정렬 */
+    #nickName {
+      font:bold 16px "malgun gothic";
+      height:50px;
+      background: #171a21;
+      color:black;
+      line-height: 50px; 
+      text-align: center;
+      display: inline;
+    }
+  
+  
+  /* menu태그 자식의 ul의 자식 li를 왼쪽정렬과 넓이 140설정 */
+    #nickName > ul > li {
+      float:left;
+      position:relative;
+    }
+      #nickName > ul > li > ul {
+      width:80px;
+      display:none;
+      position: absolute;
+      font-size:14px;
+      background: #171a21;
+    }
+      #nickName ul li:hover ul {
+      display: block;
+    }
+          
+  
+  
+      #nickName ul li a:hover{
+          color: white;
+    }
+      
+      #nickName ul li ul li a:hover{
+          color: white;
+      }
+      
+      
+    #nickName{
+      float: right;
+    }
+    #nickName #userNickName{
+    	display:inline-block;
+    	margin-right:10px;
+    }
+    #nickName #userNickName span{
+      color: #FFF;
+    }
+    #nickName #indexIcon{
+      float: right;
+    
+    }
+    #nickName .css-bar {
+    display: inline-block;
+    position: relative;
+    margin: 0 10px 3px 0;
+    padding: 0;
+    background: #FFF;
+    }
+    #nickName .css-bar, .css-bar:before, .css-bar:after {
+        width: 18px;
+        height: 3px;
+    }
+    #nickName .css-bar:before, .css-bar:after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background: #FFF;
+    }
+    #nickName .css-bar:before { margin-top: -8px; }
+    #nickName .css-bar:after { margin-top: 4px; }
+
+    #nickName ul li{
+    list-style: none;
+    }
+  /* a태그에 텍스트 밑줄을 없애고 색상을 #333 */
+    #nickName a {
+      text-decoration: none;
+      color:#c5c3c0;
+    }

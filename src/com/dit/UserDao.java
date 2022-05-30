@@ -3,6 +3,8 @@ package com.dit;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -33,5 +35,20 @@ public class UserDao {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	public String select(String id, String pwd) {
+		String sql = "SELECT * FROM user WHERE id = '"+id+"' AND pwd='"+pwd+"';";
+		try (
+			Connection con = getConnection();
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+		){
+			if(rs.next()) return rs.getString("nickName"); 
+			else return "";
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return "";
 	}
 }

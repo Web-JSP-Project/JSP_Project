@@ -5,45 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
     <style>
-        #boardItem{
-            border: 1px solid;
-        }
-        #boardItem #boardTitle{
-            font-size: 30px;
-        }
-        #boardItem #boardInfomation{
-            height: 30px;
-        }
-        #boardItem #infomationLeft{
-            float: left;
-        }
-        #boardItem #infomationRight{
-            float: right;
-        }
-        #boardItem #boardContent{
-            min-height: 300px;
-        }
+        .css-bar {
+    display: inline-block;
+    position: relative;
+    margin: 0 10px 3px 0;
+    padding: 0;
+    background: #000;
+    }
+    .css-bar, .css-bar:before, .css-bar:after {
+        width: 18px;
+        height: 3px;
+    }
+    .css-bar:before, .css-bar:after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background: #000;
+    }
+    .css-bar:before { margin-top: -8px; }
+    .css-bar:after { margin-top: 4px; }
     </style>
 </head>
 <body>
-    <div id="boardItem">
-        <div id="boardTitle">
-            제목
-        </div>
-        <div id="boardInfomation">
-            <div id="infomationLeft">
-                닉네임 | 2000-01-01
-            </div>
-            <div id="infomationRight">
-                조회수 0 | 추천수 0 | 댓글수 0
-            </div>
-        </div>
-        <hr>
-
-        <div id="boardContent">
-            본문내용
-        </div>
-    </div>
+    <span class="css-bar"></span>
 </body>
 </html>

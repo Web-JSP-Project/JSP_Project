@@ -10,7 +10,7 @@
             <h2>Login</h2>
         </div>
 
-        <form action="" method="POST">
+        <form action="signInPro.jsp" method="POST">
 
 
             <div class="input-box">
