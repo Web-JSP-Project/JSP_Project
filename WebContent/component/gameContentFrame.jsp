@@ -21,7 +21,7 @@
         </div>
         <div id="btnPay">
             <a href="#"><button><span>결제</span></button></a>
-            <a href="#"><button><span>장바구니</span></button></a>
+            <a href="shopping.jsp"><button><span>장바구니</span></button></a>
         </div>
     </div>
 </div>

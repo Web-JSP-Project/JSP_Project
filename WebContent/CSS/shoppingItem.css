@@ -1,0 +1,39 @@
+
+                .shoppingItem{
+            width: 1050px;
+            margin-bottom: 20px;
+        }
+        .shoppingItem a{
+            height: 80px;
+            display: block;
+            background-color: #555556;
+            text-decoration: none;
+            color: white;
+        }
+        .shoppingItem .gameImg{
+            display: inline-block;
+        }
+        .shoppingItem .gameCheck{
+            display: inline-block;
+            position: relative;
+            top: -30px;
+            width: 30px;
+            margin-left: 30px;
+        }
+        .shoppingItem .gameListData{
+            display: inline-block;
+            width: 750px;
+            font-size: 16px;
+            font-weight: bold;
+            position: relative;
+            top: -30px;
+        }
+        .shoppingItem .gameName{
+            display: inline-block;
+        }
+        .shoppingItem .gamePrice{
+            float: right;
+        }
+        .shoppingItem .gameImg img{
+        	height: 80px;
+        }

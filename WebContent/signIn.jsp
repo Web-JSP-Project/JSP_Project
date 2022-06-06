@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./CSS/DropdownMenu.css">
     <link rel="stylesheet" href="./CSS/member.css">
     <link rel="stylesheet" href="./CSS/signIn.css">
+    <link rel="stylesheet" href="./CSS/nickName.css">
     <style>
         #header{
             height: 50px;

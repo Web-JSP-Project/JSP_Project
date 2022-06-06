@@ -24,5 +24,5 @@
             </div>
             <input type="submit" value="로그인">
         </form>
-        <div id="joinAndFg"><a href>회원가입</a>/<a href>비밀번호 찾기</a></div>
+        <div id="joinAndFg"><a href="signUp.jsp">회원가입</a>/<a href="findPwd.jsp">비밀번호 찾기</a></div>
     </div>

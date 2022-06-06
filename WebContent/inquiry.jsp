@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./CSS/member.css">
     <link rel="stylesheet" href="./CSS/subBar.css">
     <link rel="stylesheet" href="./CSS/faq.css">
+    <link rel="stylesheet" href="./CSS/nickName.css">
     <style>
         #header{
             height: 50px;
@@ -30,7 +31,13 @@
 
     <div id="header">
 	    <%@include file="component/DropdownMenu.jsp" %>
-        <%@include file="component/member.jsp"%>
+	    <%
+			String nickName = (String) session.getAttribute("nickName");
+	    	if(nickName != null){
+	    		%><%@include file="component/nickName.jsp"%><%
+	    	}
+	    	else{ %><%@include file="component/member.jsp"%><%}
+	    %>
     </div>
     <div id="main">
         <%@include file="component/subBarInquiry.jsp"%>
