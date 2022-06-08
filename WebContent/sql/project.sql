@@ -1,1 +1,0 @@
-SELECT * FROM user WHERE id = 'admin' AND pwd='root';
