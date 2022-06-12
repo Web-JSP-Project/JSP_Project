@@ -1,4 +1,4 @@
-package com.dit;
+package com.dao;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -9,6 +9,8 @@ import java.sql.Statement;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
+
+import com.dto.UserDto;
 
 public class UserDao {
 	private Connection getConnection()  throws Exception {

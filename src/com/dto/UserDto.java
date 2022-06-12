@@ -1,4 +1,4 @@
-package com.dit;
+package com.dto;
 
 public class UserDto {
 	private String id;

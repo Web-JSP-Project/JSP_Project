@@ -1,6 +1,7 @@
 SELECT * FROM user WHERE id = 'admin' AND pwd='root';
 
 SELECT * FROM user;
+
 SELECT * FROM FILE;
 CREATE TABLE FILE(
 	fileName VARCHAR(200),
