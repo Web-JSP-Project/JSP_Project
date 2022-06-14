@@ -5,14 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-    <link rel="stylesheet" href="./CSS/body.css">
-    <link rel="stylesheet" href="./CSS/DropdownMenu.css">
-    <link rel="stylesheet" href="./CSS/member.css">
-    <link rel="stylesheet" href="./CSS/subBar.css">
-    <link rel="stylesheet" href="./CSS/boardItem.css">
-    <link rel="stylesheet" href="./CSS/comment.css">
-    <link rel="stylesheet" href="./CSS/commentInsert.css">
-    <link rel="stylesheet" href="./CSS/nickName.css">
+    <link rel="stylesheet" href="../../CSS/body.css">
+    <link rel="stylesheet" href="../../CSS/DropdownMenu.css">
+    <link rel="stylesheet" href="../../CSS/member.css">
+    <link rel="stylesheet" href="../../CSS/subBar.css">
+    <link rel="stylesheet" href="../../CSS/boardItem.css">
+    <link rel="stylesheet" href="../../CSS/comment.css">
+    <link rel="stylesheet" href="../../CSS/commentInsert.css">
+    <link rel="stylesheet" href="../../CSS/nickName.css">
 <style>
         #header{
             height: 50px;
@@ -40,31 +40,31 @@
 <body>
 
     <div id="header">
-	    <%@include file="component/DropdownMenu.jsp" %>
+	    <%@include file="../../component/DropdownMenu.jsp" %>
 	    <%
 			String nickName = (String) session.getAttribute("nickName");
 	    	if(nickName != null){
-	    		%><%@include file="component/nickName.jsp"%><%
+	    		%><%@include file="../../component/nickName.jsp"%><%
 	    	}
-	    	else{ %><%@include file="component/member.jsp"%><%}
+	    	else{ %><%@include file="../../component/member.jsp"%><%}
 	    %>
     </div>
     <div id="main">
-        <%@include file="component/subBarBoard.jsp"%>
+        <%@include file="../../component/subBarBoard.jsp"%>
         <div id="content">
         	<div id="boardMain">
-            	<%@include file="component/boardItem.jsp" %>
+            	<%@include file="../../component/boardItem.jsp" %>
             </div>
             <hr>
             <div id="commentList">
-            	<%@include file="component/comment.jsp" %>
-            	<%@include file="component/comment.jsp" %>
-            	<%@include file="component/comment.jsp" %>
-            	<%@include file="component/comment.jsp" %>
+            	<%@include file="../../component/comment.jsp" %>
+            	<%@include file="../../component/comment.jsp" %>
+            	<%@include file="../../component/comment.jsp" %>
+            	<%@include file="../../component/comment.jsp" %>
             </div>
             <hr>
             <div id="commentInsertForm">
-            	<%@include file="component/commentInsert.jsp" %>
+            	<%@include file="../../component/commentInsert.jsp" %>
             	
             </div>
         </div>

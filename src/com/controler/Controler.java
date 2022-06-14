@@ -9,6 +9,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.command.GameCommand;
+import com.command.GameImgCommand;
+import com.command.GameImgSelectCommand;
+import com.command.GameSelectCommand;
+import com.command.MinimumCommand;
+import com.command.MinimumSelectCommand;
+import com.command.RecommendCommand;
+import com.command.RecommendSelectCommand;
 import com.command.UserCommand;
 import com.command.UserInsertCommand;
 import com.command.UserSelectCommand;
@@ -38,6 +46,26 @@ public class Controler extends HttpServlet {
 			else {
 				viewPage="signIn.jsp";
 			}
+		case "gameSelect":
+			GameCommand gameSelect = new GameSelectCommand();
+			gameSelect.execute(request, response);
+			viewPage = "";
+			break;
+		case "minimumSelect":
+			MinimumCommand minimumSelect = new MinimumSelectCommand();
+			minimumSelect.execute(request, response);
+			viewPage = "";
+			break;
+		case "recommendSelect":
+			RecommendCommand recommendSelect = new RecommendSelectCommand();
+			recommendSelect.execute(request, response);
+			viewPage = "";
+			break;
+		case "gameImgSelect":
+			GameImgCommand gameImgSelect = new GameImgSelectCommand();
+			gameImgSelect.execute(request, response);
+			viewPage = "";
+			break;
 		}
 
 		RequestDispatcher rd = request.getRequestDispatcher(viewPage);
