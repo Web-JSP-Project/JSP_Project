@@ -15,7 +15,7 @@ public class GameSelectCommand implements GameCommand {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		GameDao dao = new GameDao();
-		ArrayList<GameDto> dtos =  dao.select();
+		ArrayList<GameDto> dtos =  dao.selectAll();
 		request.setAttribute("dtos", dtos);
 	}
 

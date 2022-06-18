@@ -7,17 +7,18 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.dao.GameImgDao;
-import com.dto.GameImgDto;
+import com.dao.GameDao;
+import com.dto.GameDto;
 
-
-public class GameImgSelectCommand implements GameImgCommand{
+public class GameSelectAllCommand implements GameCommand{
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		GameImgDao dao = new GameImgDao();
-		ArrayList<GameImgDto> dtos =  dao.select();
+		GameDao dao = new GameDao();
+		ArrayList<GameDto> dtos = dao.selectAll();
+		
 		request.setAttribute("dtos", dtos);
+		
 	}
 
 }

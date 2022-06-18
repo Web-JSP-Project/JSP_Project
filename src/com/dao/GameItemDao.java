@@ -9,9 +9,10 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
-import com.dto.GameDto;
+import com.dto.GameItemDto;
 
-public class GameDao {
+
+public class GameItemDao {
 	private Connection getConnection()  throws Exception {
 		Context initCtx = new InitialContext();
 		Context envCtx = (Context) initCtx.lookup("java:comp/env");
@@ -20,24 +21,21 @@ public class GameDao {
 		return con;
 	}
 
-	public ArrayList<GameDto> selectAll() {
-		ArrayList<GameDto> dtos = new ArrayList<GameDto>();
-		String sql = "SELECT * FROM game;";
+	public ArrayList<GameItemDto> selectAll() {
+		ArrayList<GameItemDto> dtos = new ArrayList<GameItemDto>();
+		String sql = "SELECT i.listName, g.gameName, g.price "
+				+ "FROM game g JOIN gameimg i "
+				+ "USING (gameid);";
 		try (
 			Connection con = getConnection();
 			Statement stmt = con.createStatement();
 			ResultSet rs = stmt.executeQuery(sql);
 		){
 			while(rs.next()) {
-				GameDto dto = new GameDto();
-				dto.setGameId(rs.getInt("gameId"));
-				dto.setGameName(rs.getString("gameName"));
-				dto.setGameExplain(rs.getString("gameExplain"));
-				dto.setRation(rs.getString("ration"));
-				dto.setGenre(rs.getString("genre"));
+				GameItemDto dto = new GameItemDto();
+				dto.setImg(rs.getString("listName"));
+				dto.setTitle(rs.getString("gameName"));
 				dto.setPrice(rs.getInt("price"));
-				dto.setGameDate(rs.getDate("gameDate"));
-				dto.setYoutubeLink(rs.getString("youtubeLink"));
 				dtos.add(dto);
 			}
 			

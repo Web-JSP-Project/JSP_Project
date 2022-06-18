@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html style="font-size: 16px;">
   <head>
@@ -9,10 +8,10 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>상점 </title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/nicepage.css" media="screen">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/store.css" media="screen">
-    <script class="u-script" type="text/javascript" src="${pageContext.request.contextPath}/javaScript/jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="${pageContext.request.contextPath}/javaScript/nicepage.js" defer=""></script>
+    <link rel="stylesheet" href="../../nicepage.css" media="screen">
+<link rel="stylesheet" href="상점-.css" media="screen">
+    <script class="u-script" type="text/javascript" src="../../jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../../nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 4.12.21, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
@@ -28,8 +27,8 @@
     <meta property="og:type" content="website">
   </head>
   <body class="u-body u-xl-mode"><header class="u-clearfix u-header u-header" id="sec-09f0"><div class="u-clearfix u-sheet u-sheet-1">
-        <a href="index.do" class="u-image u-logo u-image-1">
-          <img src="${pageContext.request.contextPath}/img/default-logo.png" class="u-logo-image u-logo-image-1">
+        <a href="https://nicepage.com" class="u-image u-logo u-image-1">
+          <img src="../../images/default-logo.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
@@ -40,16 +39,14 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-unstyled u-nav-1">
-            <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="store.do" style="padding: 10px 22px;">상점 최신순</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
-            <li class="u-nav-item"><a class="u-button-style u-nav-link u-white">최신순</a>
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="상점-최신순.html" style="padding: 10px 22px;">상점 최신순</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">최신순</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">인기순</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">금액별</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">주제별</a>
 </li></ul>
 </div>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="../라이브러리.html" style="padding: 10px 22px;">라이브러리</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="index.do" style="padding: 10px 22px;">메인페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">자유 게시판</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="../메인페이지.html" style="padding: 10px 22px;">메인페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">자유 게시판</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">자료 게시판</a>
 </li></ul>
 </div>
@@ -63,7 +60,7 @@
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="store.do">상점 최신순</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link">최신순</a>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="상점-최신순.html">상점 최신순</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link">최신순</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">인기순</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">금액별</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">주제별</a>
@@ -95,8 +92,6 @@
               <div class="u-container-style u-layout-cell u-size-60 u-layout-cell-1">
                 <div class="u-container-layout u-container-layout-1">
                   <div class="u-border-3 u-border-palette-1-base u-container-style u-grey-15 u-group u-group-1">
-
-                    
                     <div class="u-container-layout u-container-layout-2">
                       <div class="u-form u-form-1">
                         <form action="#" method="POST" class="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form" source="custom" name="form" style="padding: 10px;">
@@ -152,18 +147,34 @@
                       <input type="hidden" value="" name="recaptchaResponse">
                     </form>
                   </div>
-                  
-  	              <c:forEach var="dto" items="${dtos}">
-                    <a href="#">
-                    <div class="u-align-center u-container-style u-grey-10 u-group u-group-2">
-                      <div class="u-container-layout u-container-layout-5">
-                        <img class="u-image u-image-round u-preserve-proportions u-radius-10 u-image-2" src="${pageContext.request.contextPath}/gameImg/${dto.img}" alt="" data-image-width="184" data-image-height="89">
-                        <h5 class="u-text u-text-default u-text-2">${dto.title }</h5>
-                        <h6 class="u-text u-text-default u-text-3">${dto.price }원</h6>
-                      </div>
+                  <div class="u-align-center u-container-style u-grey-10 u-group u-group-2">
+                    <div class="u-container-layout u-container-layout-4">
+                      <img class="u-image u-image-round u-preserve-proportions u-radius-10 u-image-1" src="../../images/E2.jpg" alt="" data-image-width="184" data-image-height="89">
+                      <h5 class="u-text u-text-default u-text-2">ELDEN RING</h5>
+                      <h6 class="u-text u-text-default u-text-3">가격:000,000</h6>
                     </div>
-                    </a>
-	                </c:forEach>
+                  </div>
+                  <div class="u-align-center u-container-style u-grey-10 u-group u-group-3">
+                    <div class="u-container-layout u-container-layout-5">
+                      <img class="u-image u-image-round u-preserve-proportions u-radius-10 u-image-2" src="../../images/E2.jpg" alt="" data-image-width="184" data-image-height="89">
+                      <h5 class="u-text u-text-default u-text-4">ELDEN RING</h5>
+                      <h6 class="u-text u-text-default u-text-5">가격:000,000</h6>
+                    </div>
+                  </div>
+                  <div class="u-align-center u-container-style u-grey-10 u-group u-group-4">
+                    <div class="u-container-layout u-container-layout-6">
+                      <img class="u-image u-image-round u-preserve-proportions u-radius-10 u-image-3" src="../../images/E2.jpg" alt="" data-image-width="184" data-image-height="89">
+                      <h5 class="u-text u-text-default u-text-6">ELDEN RING</h5>
+                      <h6 class="u-text u-text-default u-text-7">가격:000,000</h6>
+                    </div>
+                  </div>
+                  <div class="u-align-center u-container-style u-grey-10 u-group u-group-5">
+                    <div class="u-container-layout u-container-layout-7">
+                      <img class="u-image u-image-round u-preserve-proportions u-radius-10 u-image-4" src="../../images/E2.jpg" alt="" data-image-width="184" data-image-height="89">
+                      <h5 class="u-text u-text-default u-text-8">ELDEN RING</h5>
+                      <h6 class="u-text u-text-default u-text-9">가격:000,000</h6>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
