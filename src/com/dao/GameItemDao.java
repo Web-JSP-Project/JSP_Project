@@ -23,9 +23,8 @@ public class GameItemDao {
 
 	public ArrayList<GameItemDto> selectAll() {
 		ArrayList<GameItemDto> dtos = new ArrayList<GameItemDto>();
-		String sql = "SELECT i.listName, g.gameName, g.price "
-				+ "FROM game g JOIN gameimg i "
-				+ "USING (gameid);";
+		String sql = "SELECT g.gameid, i.itemName, g.gameName, g.price "
+				+ "FROM game g JOIN gameimg i ON g.gameid = i.gameid;";
 		try (
 			Connection con = getConnection();
 			Statement stmt = con.createStatement();
@@ -33,7 +32,8 @@ public class GameItemDao {
 		){
 			while(rs.next()) {
 				GameItemDto dto = new GameItemDto();
-				dto.setImg(rs.getString("listName"));
+				dto.setGameId(rs.getInt("gameId"));
+				dto.setImg(rs.getString("itemName"));
 				dto.setTitle(rs.getString("gameName"));
 				dto.setPrice(rs.getInt("price"));
 				dtos.add(dto);

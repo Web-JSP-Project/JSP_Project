@@ -32,7 +32,7 @@ public class GameImgDao {
 			while(rs.next()) {
 				GameImgDto dto = new GameImgDto();
 				dto.setImgId(rs.getInt("gameId"));
-				dto.setGameid(rs.getInt("gameName"));
+				dto.setGameId(rs.getInt("gameName"));
 				dto.setMainName(rs.getString("gameExplain"));
 				dto.setBannerName(rs.getString("ration"));
 				dto.setListName(rs.getString("genre"));

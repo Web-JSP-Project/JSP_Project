@@ -2,31 +2,37 @@ package com.dto;
 
 public class GameImgDto {
 	int imgId;
-	int gameid;
+	int gameId;
 	String mainName;
 	String bannerName;
 	String listName;
 	public GameImgDto() {
 	}
-	public GameImgDto(int imgId, int gameid, String mainName, String bannerName, String listName) {
+	
+	public GameImgDto(int imgId, int gameId, String mainName, String bannerName, String listName) {
+		super();
 		this.imgId = imgId;
-		this.gameid = gameid;
+		this.gameId = gameId;
 		this.mainName = mainName;
 		this.bannerName = bannerName;
 		this.listName = listName;
 	}
+
 	public int getImgId() {
 		return imgId;
 	}
 	public void setImgId(int imgId) {
 		this.imgId = imgId;
 	}
-	public int getGameid() {
-		return gameid;
+	
+	public int getGameId() {
+		return gameId;
 	}
-	public void setGameid(int gameid) {
-		this.gameid = gameid;
+
+	public void setGameId(int gameId) {
+		this.gameId = gameId;
 	}
+
 	public String getMainName() {
 		return mainName;
 	}

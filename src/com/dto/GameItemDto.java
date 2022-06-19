@@ -1,6 +1,7 @@
 package com.dto;
 
 public class GameItemDto {
+	int gameId;
 	String img;
 	String title;
 	int price;
@@ -8,6 +9,15 @@ public class GameItemDto {
 	public GameItemDto() {
 		
 	}
+	
+	public int getGameId() {
+		return gameId;
+	}
+
+	public void setGameId(int gameId) {
+		this.gameId = gameId;
+	}
+
 	public String getImg() {
 		return img;
 	}
