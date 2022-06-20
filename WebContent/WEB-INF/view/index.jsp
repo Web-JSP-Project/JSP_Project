@@ -7,10 +7,9 @@
     <meta charset="utf-8">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <title>메인페이지</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/index.css" media="screen" />
-    <title>메인페이지</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/nicepage.css" media="screen" />
+    <title>메인</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/nicepage.css" media="screen">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/index.css" media="screen">
     <script class="u-script" type="text/javascript" src="${pageContext.request.contextPath}/javaScript/jquery.js"
       defer=""></script>
     <script class="u-script" type="text/javascript" src="${pageContext.request.contextPath}/javaScript/nicepage.js"
@@ -24,21 +23,15 @@
 		"@context": "http://schema.org",
 		"@type": "Organization",
 		"name": "",
-		"logo": "${pageContext.request.contextPath}/img/default-logo.png"
+		"logo": "${pageContext.request.contextPath}/images/KakaoTalk_20220620_163816032.png"
 }</script>
     <meta name="theme-color" content="#478ac9">
-    <meta property="og:title" content="메인페이지">
+    <meta property="og:title" content="메인">
     <meta property="og:type" content="website">
   </head>
 
   <body class="u-body u-xl-mode">
-
-
-    
-	<%@ include file="../../layout/header.jsp" %>
-
-
-
+    <%@ include file="../../layout/header.jsp" %>
     <section class="u-clearfix u-section-1" id="sec-94cd">
       <div class="u-clearfix u-sheet u-valign-top u-sheet-1">
         <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
@@ -51,30 +44,21 @@
                     <ol class="u-absolute-hcenter u-carousel-indicators u-hidden u-carousel-indicators-1">
                       <li data-u-target="#carousel-bd35" class="u-active u-grey-30" data-u-slide-to="0"></li>
                       <li data-u-target="#carousel-bd35" class="u-grey-30" data-u-slide-to="1"></li>
+                      <li data-u-target="#carousel-bd35" class="u-grey-30" data-u-slide-to="2"></li>
                     </ol>
                     <div class="u-carousel-inner" role="listbox">
                       <div
-                        class="u-active u-align-center u-carousel-item u-container-style u-image u-shading u-slide u-image-1"
-                        data-image-width="1280" data-image-height="853">
-                        <div class="u-container-layout u-valign-middle u-container-layout-2">
-                          <h2 class="u-text u-text-default u-text-1">Sample Headline</h2>
-                          <p class="u-text u-text-2">Sample text. Click to select the text box. Click again or double
-                            click to start editing the text.&nbsp;Excepteur sint occaecat cupidatat non proident, sunt
-                            in culpa qui officia deserunt mollit anim id est laborum.</p>
-                          <a href="#"
-                            class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-light-1 u-palette-2-base u-radius-50 u-btn-1">Button</a>
-                        </div>
+                        class="u-active u-align-left u-carousel-item u-container-style u-image u-shading u-slide u-image-1"
+                        data-image-width="1280" data-image-height="658">
+                        <div class="u-container-layout u-container-layout-2"></div>
                       </div>
-                      <div class="u-align-center u-carousel-item u-container-style u-image u-shading u-slide u-image-2"
-                        data-image-width="1280" data-image-height="716">
-                        <div class="u-container-layout u-valign-middle u-container-layout-3">
-                          <h2 class="u-text u-text-default u-text-3">Sample Headline</h2>
-                          <p class="u-text u-text-4">Sample text. Click to select the text box. Click again or double
-                            click to start editing the text.&nbsp;Excepteur sint occaecat cupidatat non proident, sunt
-                            in culpa qui officia deserunt mollit anim id est laborum.</p>
-                          <a href="#"
-                            class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-light-1 u-palette-2-base u-radius-50 u-btn-2">Button</a>
-                        </div>
+                      <div class="u-carousel-item u-container-style u-image u-slide u-image-2" data-image-width="1280"
+                        data-image-height="658">
+                        <div class="u-container-layout u-container-layout-3"></div>
+                      </div>
+                      <div class="u-carousel-item u-container-style u-image u-slide u-image-3" data-image-width="1280"
+                        data-image-height="658">
+                        <div class="u-container-layout u-container-layout-4"></div>
                       </div>
                     </div>
                     <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-grey-60 u-icon-rounded u-radius-10 u-spacing-9 u-carousel-control-1"
@@ -103,42 +87,42 @@
                 </div>
               </div>
               <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-4">
+                <div class="u-container-layout u-container-layout-5">
                   <div class="u-expanded-width u-list u-list-1">
                     <div class="u-repeater u-repeater-1">
                       <div class="u-container-style u-list-item u-repeater-item">
-                        <div class="u-container-layout u-similar-container u-valign-top u-container-layout-5">
-                          <img alt="" class="u-expanded-width u-image u-image-default u-image-3" data-image-width="2000"
-                            data-image-height="1333" src="${pageContext.request.contextPath}/img/7.svg">
-                          <h3 class="u-text u-text-default u-text-5">Sample Headline</h3>
-                          <p class="u-text u-text-6">Sample text. Click to select the text box. Click again or double
-                            click to start editing the text.</p>
-                          <a href=""
-                            class="u-active-none u-border-2 u-border-hover-palette-2-base u-border-palette-2-light-1 u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-3">learn
-                            more</a>
-                        </div>
-                      </div>
-                      <div class="u-container-style u-list-item u-repeater-item">
                         <div class="u-container-layout u-similar-container u-valign-top u-container-layout-6">
                           <img alt="" class="u-expanded-width u-image u-image-default u-image-4" data-image-width="2000"
-                            data-image-height="1333" src="${pageContext.request.contextPath}/img/7.svg">
-                          <h3 class="u-text u-text-default u-text-7">Sample Headline</h3>
-                          <p class="u-text u-text-8">Sample text. Click to select the text box. Click again or double
+                            data-image-height="1333" src="${pageContext.request.contextPath}/images/6.svg">
+                          <h3 class="u-text u-text-default u-text-1">Sample Headline</h3>
+                          <p class="u-text u-text-2">Sample text. Click to select the text box. Click again or double
                             click to start editing the text.</p>
                           <a href=""
-                            class="u-active-none u-border-2 u-border-hover-palette-2-base u-border-palette-2-light-1 u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-4">learn
+                            class="u-active-none u-border-2 u-border-hover-palette-2-base u-border-palette-2-light-1 u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-1">learn
                             more</a>
                         </div>
                       </div>
                       <div class="u-container-style u-list-item u-repeater-item">
                         <div class="u-container-layout u-similar-container u-valign-top u-container-layout-7">
                           <img alt="" class="u-expanded-width u-image u-image-default u-image-5" data-image-width="2000"
-                            data-image-height="1333" src="${pageContext.request.contextPath}/img/7.svg">
-                          <h3 class="u-text u-text-default u-text-9">Sample Headline</h3>
-                          <p class="u-text u-text-10">Sample text. Click to select the text box. Click again or double
+                            data-image-height="1333" src="${pageContext.request.contextPath}/images/6.svg">
+                          <h3 class="u-text u-text-default u-text-3">Sample Headline</h3>
+                          <p class="u-text u-text-4">Sample text. Click to select the text box. Click again or double
                             click to start editing the text.</p>
                           <a href=""
-                            class="u-active-none u-border-2 u-border-hover-palette-2-base u-border-palette-2-light-1 u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-5">learn
+                            class="u-active-none u-border-2 u-border-hover-palette-2-base u-border-palette-2-light-1 u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-2">learn
+                            more</a>
+                        </div>
+                      </div>
+                      <div class="u-container-style u-list-item u-repeater-item">
+                        <div class="u-container-layout u-similar-container u-valign-top u-container-layout-8">
+                          <img alt="" class="u-expanded-width u-image u-image-default u-image-6" data-image-width="2000"
+                            data-image-height="1333" src="${pageContext.request.contextPath}/images/6.svg">
+                          <h3 class="u-text u-text-default u-text-5">Sample Headline</h3>
+                          <p class="u-text u-text-6">Sample text. Click to select the text box. Click again or double
+                            click to start editing the text.</p>
+                          <a href=""
+                            class="u-active-none u-border-2 u-border-hover-palette-2-base u-border-palette-2-light-1 u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-3">learn
                             more</a>
                         </div>
                       </div>
@@ -155,7 +139,7 @@
 
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-9525">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-small-text u-text u-text-variant u-text-1">Sample text. Click to select the Text Element.</p>
+        <p class="u-small-text u-text u-text-variant u-text-1">팀:AI지구방위대</p>
       </div>
     </footer>
     <section class="u-backlink u-clearfix u-grey-80">

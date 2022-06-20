@@ -29,33 +29,33 @@ public class Controler extends HttpServlet {
 		String com = uri.substring(uri.lastIndexOf("/")+1, uri.lastIndexOf(".do"));
 
 		switch(com.trim()) {
-		case "index":
-			viewPage="WEB-INF/view/index.jsp";
-			break;
-		case "userInsert":
-			UserCommand userInsert = new UserInsertCommand();
-			userInsert.execute(request, response);
-			viewPage="Home.jsp";
-			break;
-		case "userSelect":
-			UserCommand userSelect = new UserSelectCommand();
-			userSelect.execute(request, response); 
-			if(request.getSession().getAttribute("nickName") != null) {
-				viewPage="Home.jsp";				
-			}
-			else {
-				viewPage="signIn.jsp";
-			}
-		case "store":
-			GameItemCommand gameItemSelectAll = new GameItemSelectAllCommand();
-			gameItemSelectAll.execute(request, response);
-			viewPage = "WEB-INF/view/store.jsp";
-			break;
-		case "storeContent":
-			GameContentCommand gameContentSelect = new GameContentSelectCommand();
-			gameContentSelect.execute(request, response);
-			viewPage="WEB-INF/view/storeContent.jsp";
-			break;
+//		case "index":
+//			viewPage="WEB-INF/view/index.jsp";
+//			break;
+//		case "userInsert":
+//			UserCommand userInsert = new UserInsertCommand();
+//			userInsert.execute(request, response);
+//			viewPage="Home.jsp";
+//			break;
+//		case "userSelect":
+//			UserCommand userSelect = new UserSelectCommand();
+//			userSelect.execute(request, response); 
+//			if(request.getSession().getAttribute("nickName") != null) {
+//				viewPage="Home.jsp";				
+//			}
+//			else {
+//				viewPage="signIn.jsp";
+//			}
+//		case "store":
+//			GameItemCommand gameItemSelectAll = new GameItemSelectAllCommand();
+//			gameItemSelectAll.execute(request, response);
+//			viewPage = "WEB-INF/view/store.jsp";
+//			break;
+//		case "storeContent":
+//			GameContentCommand gameContentSelect = new GameContentSelectCommand();
+//			gameContentSelect.execute(request, response);
+//			viewPage="WEB-INF/view/storeContent.jsp";
+//			break;
 		}
 
 		RequestDispatcher rd = request.getRequestDispatcher(viewPage);

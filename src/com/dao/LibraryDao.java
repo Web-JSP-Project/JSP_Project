@@ -10,9 +10,9 @@ import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
 import com.dto.GameItemDto;
+import com.dto.LibraryDto;
 
-
-public class GameItemDao {
+public class LibraryDao {
 	private Connection getConnection()  throws Exception {
 		Context initCtx = new InitialContext();
 		Context envCtx = (Context) initCtx.lookup("java:comp/env");
@@ -21,22 +21,19 @@ public class GameItemDao {
 		return con;
 	}
 
-	public ArrayList<GameItemDto> selectAll() {
-		ArrayList<GameItemDto> dtos = new ArrayList<GameItemDto>();
-		String sql = "SELECT g.gameid, i.itemName, g.gameName, g.price "
-				+ "FROM game g JOIN gameimg i ON g.gameid = i.gameid;";
+	public ArrayList<LibraryDto> selectAll() {
+		ArrayList<LibraryDto> dtos = new ArrayList<LibraryDto>();
+		String sql = "SELECT g.gameid, g.gameName, i.libraryList FROM game g JOIN gameimg i ON g.gameid = i.gameid;";
 		try (
 			Connection con = getConnection();
 			Statement stmt = con.createStatement();
 			ResultSet rs = stmt.executeQuery(sql);
 		){
 			while(rs.next()) {
-				GameItemDto dto = new GameItemDto();
+				LibraryDto dto = new LibraryDto();
 				dto.setGameId(rs.getInt("gameId"));
-				dto.setImg(rs.getString("itemName"));
-				dto.setTitle(rs.getString("gameName"));
-				String price = String.format("%,d", rs.getInt("price"));
-				dto.setPrice(price);
+				dto.setGameName(rs.getString("gameName"));
+				dto.setImg(rs.getString("libraryList"));
 				dtos.add(dto);
 			}
 			

@@ -4,7 +4,7 @@ public class GameItemDto {
 	int gameId;
 	String img;
 	String title;
-	int price;
+	String price;
 	
 	public GameItemDto() {
 		
@@ -30,10 +30,10 @@ public class GameItemDto {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public int getPrice() {
+	public String getPrice() {
 		return price;
 	}
-	public void setPrice(int price) {
+	public void setPrice(String price) {
 		this.price = price;
 	}
 	

@@ -14,11 +14,10 @@ public class GameContentSelectCommand implements GameContentCommand{
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String gameId = request.getParameter("gameId");
+		System.out.println(gameId);
 		GameContentDao dao = new GameContentDao();
 		GameContentDto dto = dao.select(gameId);
 
-		System.out.println(dto.getLink());
-		System.out.println(dto.getContent());
 		request.setAttribute("dto", dto);
 	}
 
