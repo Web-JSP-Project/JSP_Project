@@ -8,7 +8,12 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>상점 구매 칸</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/nicepage.css" media="screen">
+	  <c:if test="${sessionScope.nickName != null}">
+	    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/nicepageOn.css" media="screen">
+	  </c:if>
+	  <c:if test="${sessionScope.nickName == null}">
+	    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/nicepageOff.css" media="screen">
+	  </c:if>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/storeContent.css" media="screen">
     <script class="u-script" type="text/javascript" src="${pageContext.request.contextPath}/javaScript/jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="${pageContext.request.contextPath}/javaScript/nicepage.js" defer=""></script>
@@ -28,7 +33,12 @@
   </head>
   <body class="u-body u-xl-mode">
     
-    <%@ include file="../../layout/header.jsp" %>
+  <c:if test="${sessionScope.nickName != null}">
+  	<%@ include file="../../layout/headeron.jsp" %>
+  </c:if>
+  <c:if test="${sessionScope.nickName == null}">
+  	<%@ include file="../../layout/headeroff.jsp" %>
+  </c:if>
     <section class="u-clearfix u-section-1" id="sec-23eb">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
@@ -121,11 +131,11 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                   <div class="u-align-left u-container-style u-grey-60 u-group u-radius-10 u-shape-round u-group-1">
                     <div class="u-container-layout u-container-layout-2">
                       <h5 class="u-text u-text-2">출시일</h5>
-                      <h6 class="u-text u-text-default u-text-3">0000/00/00</h6>
+                      <h6 class="u-text u-text-default u-text-3">${dto.date }</h6>
                       <h5 class="u-text u-text-default u-text-4">배급사</h5>
-                      <h6 class="u-text u-text-default u-text-5"> FromSorfWare inc</h6>
+                      <h6 class="u-text u-text-default u-text-5"> ${dto.ration}</h6>
                       <h5 class="u-text u-text-6">가격</h5>
-                      <h5 class="u-text u-text-7">64,800</h5>
+                      <h5 class="u-text u-text-7">&#8361; ${dto.price }</h5>
                     </div>
                   </div>
                   <a href="https://nicepage.com/web-design" class="u-black u-border-none u-btn u-btn-round u-button-style u-hover-grey-60 u-radius-6 u-btn-1">구매하기</a>

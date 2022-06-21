@@ -21,9 +21,17 @@ public class LibraryDao {
 		return con;
 	}
 
-	public ArrayList<LibraryDto> selectAll() {
+	public ArrayList<LibraryDto> selectAll(String nickName) {
 		ArrayList<LibraryDto> dtos = new ArrayList<LibraryDto>();
-		String sql = "SELECT g.gameid, g.gameName, i.libraryList FROM game g JOIN gameimg i ON g.gameid = i.gameid;";
+		String sql = "SELECT g.gameid, i.itemName, g.gameName, g.price "
+				+ "FROM game g "
+				+ "JOIN gameimg i ON g.gameid = i.gameid "
+				+ "WHERE g.gameid IN( "
+				+ "SELECT gameid "
+				+ "FROM library "
+				+ "WHERE userid = ( "
+				+ "SELECT id FROM user "
+				+ "WHERE nickName ='"+nickName+"'));";
 		try (
 			Connection con = getConnection();
 			Statement stmt = con.createStatement();
@@ -33,7 +41,7 @@ public class LibraryDao {
 				LibraryDto dto = new LibraryDto();
 				dto.setGameId(rs.getInt("gameId"));
 				dto.setGameName(rs.getString("gameName"));
-				dto.setImg(rs.getString("libraryList"));
+				dto.setImg(rs.getString("itemName"));
 				dtos.add(dto);
 			}
 			

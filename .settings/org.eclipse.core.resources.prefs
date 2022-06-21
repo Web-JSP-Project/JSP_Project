@@ -1,4 +1,8 @@
 eclipse.preferences.version=1
+encoding//WebContent/WEB-INF/view/FaQ.jsp=UTF-8
+encoding//WebContent/WEB-INF/view/QnA.jsp=UTF-8
+encoding//WebContent/WEB-INF/view/QnAInsert.jsp=UTF-8
+encoding//WebContent/WEB-INF/view/QnASee.jsp=UTF-8
 encoding//WebContent/WEB-INF/view/library.jsp=UTF-8
 encoding//WebContent/WEB-INF/view/store.jsp=UTF-8
 encoding//WebContent/WEB-INF/view/storeContent.jsp=UTF-8

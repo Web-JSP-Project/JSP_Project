@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html style="font-size: 16px;">
   <head>
@@ -8,7 +8,12 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>자유게시판</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/nicepage.css" media="screen">
+	  <c:if test="${sessionScope.nickName != null}">
+	    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/nicepageOn.css" media="screen">
+	  </c:if>
+	  <c:if test="${sessionScope.nickName == null}">
+	    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/nicepageOff.css" media="screen">
+	  </c:if>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/freeBorad.css" media="screen">
     <script class="u-script" type="text/javascript" src="${pageContext.request.contextPath}/javaScript/jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="${pageContext.request.contextPath}/javaScript/nicepage.js" defer=""></script>
@@ -27,7 +32,12 @@
     <meta property="og:type" content="website">
   </head>
   <body class="u-body u-xl-mode">
-  <%@ include file="../../layout/header.jsp" %>
+  <c:if test="${sessionScope.nickName != null}">
+  	<%@ include file="../../layout/headeron.jsp" %>
+  </c:if>
+  <c:if test="${sessionScope.nickName == null}">
+  	<%@ include file="../../layout/headeroff.jsp" %>
+  </c:if>
     <section class="u-clearfix u-section-1" id="sec-5cfc">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
@@ -75,34 +85,20 @@
                         </tr>
                       </thead>
                       <tbody class="u-table-body">
-                        <tr style="height: 46px;">
-                          <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">1</td>
-                          <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">비둘기야 먹자</td>
-                          <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">AAAAAA</td>
-                          <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">00/00/00</td>
-                          <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">10000</td>
-                        </tr>
-                        <tr style="height: 46px;">
-                          <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">2</td>
-                          <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">구구구구구</td>
-                          <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">AAAAAA</td>
-                          <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">00/00/00</td>
-                          <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"></td>
-                        </tr>
-                        <tr style="height: 46px;">
-                          <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">3</td>
-                          <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">구9999</td>
-                          <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">AAAAAA</td>
-                          <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">00/00/00</td>
-                          <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"></td>
-                        </tr>
-                        <tr style="height: 46px;">
-                          <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">4</td>
-                          <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">구구구구구</td>
-                          <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">AAAAAA</td>
-                          <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">00/00/00</td>
-                          <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"></td>
-                        </tr>
+                      
+                        <c:forEach var="dto" items="${dtos}">
+                        <a href="boardContent.b?boardId=${dto.boardId}">
+                          <tr style="height: 46px;">
+                          
+                            <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">${dto.boardId}</td>
+                            <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">${dto.title}</td>
+                            <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">${dto.userId}</td>
+                            <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">${dto.day}</td>
+                            <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">${dto.hit}</td>
+                          </tr>
+                          </a>
+                        </c:forEach>
+                        
                       </tbody>
                     </table>
                   </div>

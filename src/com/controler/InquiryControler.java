@@ -20,8 +20,11 @@ public class InquiryControler extends HttpServlet {
 		String com = uri.substring(uri.lastIndexOf("/")+1, uri.lastIndexOf(".i"));
 
 		switch(com.trim()) {
-		case "index":
-			viewPage="WEB-INF/view/index.jsp";
+		case "qna":
+			viewPage="WEB-INF/view/QnA.jsp";
+			break;
+		case "faq":
+			viewPage="WEB-INF/view/FaQ.jsp";
 			break;
 		}
 

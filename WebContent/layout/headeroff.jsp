@@ -104,7 +104,7 @@
                       </ul>
                     </div>
                   </li>
-                  <li class="u-nav-item"><a class="u-button-style u-nav-link">고객지원</a>
+                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="faq.i">고객지원</a>
                     <div class="u-nav-popup">
                       <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
                         <li class="u-nav-item"><a class="u-button-style u-nav-link" href="faq.i">FaQ</a>

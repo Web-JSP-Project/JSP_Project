@@ -38,7 +38,7 @@ public class UserDao {
 			e.printStackTrace();
 		}
 	}
-	public String select(String id, String pwd) {
+	public String selectNickName(String id, String pwd) {
 		String sql = "SELECT * FROM user WHERE id = '"+id+"' AND pwd='"+pwd+"';";
 		try (
 			Connection con = getConnection();
@@ -52,5 +52,48 @@ public class UserDao {
 			e.printStackTrace();
 		}
 		return "";
+	}
+	public String selectImg(String id, String pwd) {
+		String sql = "SELECT * FROM user WHERE id = '"+id+"' AND pwd='"+pwd+"';";
+		try (
+			Connection con = getConnection();
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+		){
+			if(rs.next()) return rs.getString("profileImg"); 
+			else return "";
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return "";
+	}
+	public boolean idCheack(String id) {
+		String sql = "SELECT * FROM user WHERE id = '"+id+"';";
+		try (
+			Connection con = getConnection();
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+		){
+			if(rs.next()) return true;
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+	public boolean nickNameCheack(String nickName) {
+		String sql = "SELECT * FROM user WHERE nickName = '"+nickName+"';";
+		try (
+			Connection con = getConnection();
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+		){
+			if(rs.next()) return true;
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
 	}
 }

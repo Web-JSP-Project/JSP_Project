@@ -7,17 +7,17 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.dao.LibraryDao;
-import com.dto.LibraryDto;
+import com.dao.FreeBoardDao;
+import com.dto.BoardDto;
 
-public class LibrarySelectAllCommand implements LibraryCommand{
+public class BoardSelectCommand implements BoardCommand {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		LibraryDao dao = new LibraryDao();
-		ArrayList<LibraryDto> dtos = dao.selectAll((String)request.getSession().getAttribute("nickName"));
-		request.setAttribute("libraryDtos", dtos);
-		request.setAttribute("size",dtos.size());
+		FreeBoardDao dao = new FreeBoardDao();
+		ArrayList<BoardDto> dtos = dao.selectAll();
+		request.setAttribute("dtos", dtos);
+
 	}
 
 }

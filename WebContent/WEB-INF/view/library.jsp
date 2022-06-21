@@ -8,7 +8,7 @@
     <meta name="keywords" content="결제가 완료 되었습니다.">
     <meta name="description" content="">
     <title>라이브러리 홈</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/nicepage.css" media="screen">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/nicepageOn.css" media="screen">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/library.css" media="screen">
     <script class="u-script" type="text/javascript" src="${pageContext.request.contextPath}/css/javaScript/jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="${pageContext.request.contextPath}/css/javaScript/nicepage.js" defer=""></script>
@@ -29,7 +29,7 @@
     <meta property="og:type" content="website">
   </head>
   <body class="u-body u-xl-mode">
-    <%@ include file="../../layout/header.jsp" %>
+    <%@ include file="../../layout/headeron.jsp" %>
     <section class="u-clearfix u-white u-section-2" id="sec-0a8d">
       <div class="u-clearfix u-sheet u-valign-bottom u-sheet-1">
         <div class="u-clearfix u-gutter-0 u-layout-wrap u-layout-wrap-1">
@@ -38,9 +38,6 @@
               <div class="u-container-style u-grey-10 u-layout-cell u-size-11 u-layout-cell-1">
                 <div class="u-container-layout u-container-layout-1">
                   <h6 class="u-text u-text-1">------게임이름--</h6>
-                  <h6 class="u-text u-text-2">------게임이름--</h6>
-                  <h6 class="u-text u-text-3">------게임이름--</h6>
-                  <h6 class="u-text u-text-4">------게임이름--</h6>
                 </div>
               </div>
               <div class="u-container-style u-layout-cell u-size-49 u-layout-cell-2">

@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
   <!DOCTYPE html>
   <html style="font-size: 16px;">
 
@@ -8,7 +9,12 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>메인</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/nicepage.css" media="screen">
+	  <c:if test="${sessionScope.nickName != null}">
+	    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/nicepageOn.css" media="screen">
+	  </c:if>
+	  <c:if test="${sessionScope.nickName == null}">
+	    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/nicepageOff.css" media="screen">
+	  </c:if>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/index.css" media="screen">
     <script class="u-script" type="text/javascript" src="${pageContext.request.contextPath}/javaScript/jquery.js"
       defer=""></script>
@@ -29,9 +35,13 @@
     <meta property="og:title" content="메인">
     <meta property="og:type" content="website">
   </head>
-
   <body class="u-body u-xl-mode">
-    <%@ include file="../../layout/header.jsp" %>
+  <c:if test="${sessionScope.nickName != null}">
+  	<%@ include file="../../layout/headeron.jsp" %>
+  </c:if>
+  <c:if test="${sessionScope.nickName == null}">
+  	<%@ include file="../../layout/headeroff.jsp" %>
+  </c:if>
     <section class="u-clearfix u-section-1" id="sec-94cd">
       <div class="u-clearfix u-sheet u-valign-top u-sheet-1">
         <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
@@ -93,10 +103,11 @@
                       <div class="u-container-style u-list-item u-repeater-item">
                         <div class="u-container-layout u-similar-container u-valign-top u-container-layout-6">
                           <img alt="" class="u-expanded-width u-image u-image-default u-image-4" data-image-width="2000"
-                            data-image-height="1333" src="${pageContext.request.contextPath}/images/6.svg">
-                          <h3 class="u-text u-text-default u-text-1">Sample Headline</h3>
-                          <p class="u-text u-text-2">Sample text. Click to select the text box. Click again or double
-                            click to start editing the text.</p>
+                            data-image-height="1333" src="${pageContext.request.contextPath}/gameImg/home/11.jpg">
+                          <h3 class="u-text u-text-default u-text-1">오리와 눈먼숲</h3>
+                          <p class="u-text u-text-2">호평 받은
+                            액션 플랫포머 게임 Ori and the Blind Forest의 제작자들이 큰 기대를 받고 있는
+                            후속작을 내놓습니다</p>
                           <a href=""
                             class="u-active-none u-border-2 u-border-hover-palette-2-base u-border-palette-2-light-1 u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-1">learn
                             more</a>
@@ -105,10 +116,11 @@
                       <div class="u-container-style u-list-item u-repeater-item">
                         <div class="u-container-layout u-similar-container u-valign-top u-container-layout-7">
                           <img alt="" class="u-expanded-width u-image u-image-default u-image-5" data-image-width="2000"
-                            data-image-height="1333" src="${pageContext.request.contextPath}/images/6.svg">
-                          <h3 class="u-text u-text-default u-text-3">Sample Headline</h3>
-                          <p class="u-text u-text-4">Sample text. Click to select the text box. Click again or double
-                            click to start editing the text.</p>
+                            data-image-height="1333" src="${pageContext.request.contextPath}/gameImg/home/124.jpg ">
+                          <h3 class="u-text u-text-default u-text-3">엘든링</h3>
+                          <p class="u-text u-text-4">자극으로 가득한 드넓은 세계
+                            다채로운 시추에이션을 지닌 탁 트인 필드와 복잡하면서 
+                            입체적으로 짜인 거대한 던전이 경계선 없이 이어지는 드넓은 세계</p>
                           <a href=""
                             class="u-active-none u-border-2 u-border-hover-palette-2-base u-border-palette-2-light-1 u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-2">learn
                             more</a>
@@ -117,10 +129,9 @@
                       <div class="u-container-style u-list-item u-repeater-item">
                         <div class="u-container-layout u-similar-container u-valign-top u-container-layout-8">
                           <img alt="" class="u-expanded-width u-image u-image-default u-image-6" data-image-width="2000"
-                            data-image-height="1333" src="${pageContext.request.contextPath}/images/6.svg">
-                          <h3 class="u-text u-text-default u-text-5">Sample Headline</h3>
-                          <p class="u-text u-text-6">Sample text. Click to select the text box. Click again or double
-                            click to start editing the text.</p>
+                            data-image-height="1333" src="${pageContext.request.contextPath}/gameImg/home/fl1.jpg">
+                          <h3 class="u-text u-text-default u-text-5">파이널판타지</h3>
+                          <p class="u-text u-text-6">1997년에 발매된 FINAL FANTASY VI의 주요 스태프가 만든 FINAL FANTASY VII REMAK</p>
                           <a href=""
                             class="u-active-none u-border-2 u-border-hover-palette-2-base u-border-palette-2-light-1 u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-3">learn
                             more</a>

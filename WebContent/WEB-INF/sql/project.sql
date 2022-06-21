@@ -3,6 +3,12 @@ DROP table gameImg;
 DROP TABLE minimum;
 DROP TABLE recommend;
 DROP table game;
+DROP TABLE faq;
+DROP TABLE qna;
+DROP TABLE freeBoard;
+DROP TABLE dataBoard;
+DROP TABLE qnaComment;
+DROP TABLE boardComment;
 DROP TABLE library;
 
 CREATE TABLE user(
@@ -11,7 +17,8 @@ CREATE TABLE user(
 	nickName VARCHAR(30) NOT NULL,
 	email VARCHAR(50) NOT NULL,
 	birth DATE NOT NULL,
-	joinday timestamp not null default NOW()
+	joinday timestamp not null default NOW(),
+	profileImg VARCHAR(30)
 );
 CREATE TABLE game(
 	gameid INTEGER(3) NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -117,6 +124,8 @@ SELECT * FROM minimum;
 SELECT * FROM recommend;
 SELECT * FROM gameimg;
 SELECT * FROM library;
+SELECT * FROM freeboard;
+SELECT * FROM faq;
 
 DESC game;
 
@@ -135,7 +144,7 @@ WHERE gameid = 6;
 
 SELECT * FROM file;
 
-INSERT INTO USER(id, pwd, nickName, email, birth) VALUES('admin', 'root', '관리자', 'cybersteer@naver.com', '0000-01-01');
+INSERT INTO USER(id, pwd, nickName, email, birth, profileImg) VALUES('admin', 'root', '관리자', 'cybersteer@naver.com', '0000-01-01','profile/cat.png');
 
 INSERT INTO game (gameName, gameExplain, ration, genre, price, gameDate,youtubeLink)
 VALUES('','','','',,'','');
@@ -250,6 +259,8 @@ INSERT INTO library(userid, gameid) VALUES('admin',1);
 INSERT INTO library(userid, gameid) VALUES('admin',2);
 INSERT INTO library(userid, gameid) VALUES('admin',4);
 
+INSERT INTO freeboard(title, content, userid) VALUES(?,?,?);
+
 SELECT * FROM user WHERE id = 'admin' AND pwd='root';
 
 SELECT * FROM user;
@@ -272,8 +283,38 @@ DELETE FROM file;
 
 
 SELECT g.gameid, i.itemName, g.gameName, g.price
-FROM game g JOIN gameimg i
-ON g.gameid = i.gameid;
+FROM game g JOIN gameimg i ON g.gameid = i.gameid
+JOIN library l ON g.gameid = l.gameid
+JOIN user u ON user.id = l.userid;
+
+SELECT * FROM library;
+SELECT * FROM user;
+SELECT * FROM game;
+SELECT * FROM gameimg;
+SELECT * FROM freeboard;
+
+SELECT g.gameid, i.itemName, g.gameName, g.price
+FROM game g JOIN gameimg i ON g.gameid = i.gameid
+WHERE g.gameid IN(
+	SELECT gameid
+	FROM library
+	WHERE userid = (
+		SELECT id
+		FROM user
+		WHERE nickName ='관리자'
+		)
+	)
+;
+
+
+
+SELECT b.freeboardid, b.title, b.content, b.freeBoardDay, b.hit, u.nickName
+FROM freeboard b JOIN user u ON b.userid = u.id
+WHERE u.id = 'admin';
+
+SELECT g.gameid, g.gameName, i.libraryList
+FROM game g JOIN gameimg i ON g.gameid = i.gameid
+JOIN user u ON u.id = i.
 
 SELECT g.gameid, i.itemName, i.f1name, i.f2name, g.gameName, g.genre, g.youtubeLink, g.gameDate, g.ration, g.price, g.gameExplain, m.CPU AS mCpu, m.graphic AS mGraphic, m.ram AS mRam, m.DISK AS mDisk, r.CPU AS rCpu, r.graphic AS rGraphic, r.ram AS rRam, r.DISK AS rDisk
 FROM game g JOIN gameimg i ON g.gameid = i.gameid 

@@ -9,7 +9,12 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>상점 장르</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/nicepage.css" media="screen">
+	  <c:if test="${sessionScope.nickName != null}">
+	    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/nicepageOn.css" media="screen">
+	  </c:if>
+	  <c:if test="${sessionScope.nickName == null}">
+	    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/nicepageOff.css" media="screen">
+	  </c:if>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/store.css" media="screen">
     <script class="u-script" type="text/javascript" src="${pageContext.request.contextPath}/javaScript/jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="${pageContext.request.contextPath}/javaScript/nicepage.js" defer=""></script>
@@ -29,7 +34,12 @@
   </head>
   <body class="u-body u-xl-mode">
     
-    <%@ include file="../../layout/header.jsp" %>
+  <c:if test="${sessionScope.nickName != null}">
+  	<%@ include file="../../layout/headeron.jsp" %>
+  </c:if>
+  <c:if test="${sessionScope.nickName == null}">
+  	<%@ include file="../../layout/headeroff.jsp" %>
+  </c:if>
     <section class="u-clearfix u-section-1" id="sec-5d12">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">

@@ -24,21 +24,33 @@ public class UserControler extends HttpServlet {
 		String com = uri.substring(uri.lastIndexOf("/")+1, uri.lastIndexOf(".u"));
 
 		switch(com.trim()) {
-		case "userInsert":
-		UserCommand userInsert = new UserInsertCommand();
-		userInsert.execute(request, response);
-		viewPage="Home.jsp";
-		break;
-	case "userSelect":
-		UserCommand userSelect = new UserSelectCommand();
-		userSelect.execute(request, response); 
-		if(request.getSession().getAttribute("nickName") != null) {
-			viewPage="Home.jsp";				
-		}
-		else {
-			viewPage="signIn.jsp";
-		}
+		case "login":
+			viewPage="WEB-INF/view/login.jsp";
+			break;
+		case "userSelect":
+			UserCommand userSelect = new UserSelectCommand();
+			userSelect.execute(request, response); 
+			if(request.getSession().getAttribute("nickName") != null) {
+				viewPage="WEB-INF/view/index.jsp";				
+			}
+			else {
+				viewPage="WEB-INF/view/login.jsp";
+			}
+			break;
 
+		case "logout":
+			request.getSession().invalidate();
+			viewPage="WEB-INF/view/index.jsp";
+			break;
+		case "join":
+			viewPage="WEB-INF/view/join.jsp";
+			break;
+		case "joinInsert":
+			UserCommand userInsert = new UserInsertCommand();
+			userInsert.execute(request, response);
+			viewPage="WEB-INF/view/index.jsp";
+			break;
+		}
 		RequestDispatcher rd = request.getRequestDispatcher(viewPage);
 		rd.forward(request, response);
 	

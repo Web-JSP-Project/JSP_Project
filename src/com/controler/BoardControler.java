@@ -9,6 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.command.BoardCommand;
+import com.command.BoardSelectCommand;
+import com.dao.FreeBoardDao;
+
 @WebServlet("*.b")
 public class BoardControler extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -21,6 +25,8 @@ public class BoardControler extends HttpServlet {
 
 		switch(com.trim()) {
 		case "freeBoard":
+			BoardCommand freeBoardSelect = new BoardSelectCommand();
+			freeBoardSelect.execute(request, response);
 			viewPage="WEB-INF/view/freeBoard.jsp";
 			break;
 		case "dataBoard":

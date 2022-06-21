@@ -31,17 +31,11 @@
 %>
 <br>
 
-a
-<c:forEach var="i" begin="1" end="${size }" >
-	${i }
-	<c:if test="${i%3 == 0 }">
-		<c:if test="${i<size }">
-		b a
-		</c:if>
-		<c:if test="${i>=size }">
-		b
-		</c:if>
-	</c:if>
-</c:forEach>
+  <c:if test="true">
+    ${1 ==1}
+  </c:if>
+   <c:if test="false">
+    ${1 == 0}
+  </c:if>
 </body>
 </html>
