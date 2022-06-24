@@ -1,6 +1,7 @@
 package com.dto;
 
 public class LibraryDto {
+	//라이브러리 정보
 	int gameId;
 	String gameName;
 	String img;

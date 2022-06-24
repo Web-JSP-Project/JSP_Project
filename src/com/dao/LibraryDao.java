@@ -22,6 +22,7 @@ public class LibraryDao {
 	}
 
 	public ArrayList<LibraryDto> selectAll(String nickName) {
+		//라이브러리 검색
 		ArrayList<LibraryDto> dtos = new ArrayList<LibraryDto>();
 		String sql = "SELECT g.gameid, i.itemName, g.gameName, g.price "
 				+ "FROM game g "

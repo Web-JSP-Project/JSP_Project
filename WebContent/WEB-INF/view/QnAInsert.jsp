@@ -9,7 +9,12 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>QnA글쓰기</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/nicepage.css" media="screen">
+	  <c:if test="${sessionScope.nickName != null}">
+	    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/nicepageOn.css" media="screen">
+	  </c:if>
+	  <c:if test="${sessionScope.nickName == null}">
+	    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/nicepageOff.css" media="screen">
+	  </c:if>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/Insert.css" media="screen">
     <script class="u-script" type="text/javascript" src="${pageContext.request.contextPath}/javaScript/jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="${pageContext.request.contextPath}/javaScript/nicepage.js" defer=""></script>

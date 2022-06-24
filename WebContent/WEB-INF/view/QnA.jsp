@@ -47,91 +47,55 @@
               <div class="u-container-style u-layout-cell u-shape-rectangle u-size-30 u-layout-cell-1">
                 <div class="u-border-2 u-border-grey-10 u-container-layout u-container-layout-1">
                   <h3 class="u-text u-text-default u-text-1">QnA게시판</h3>
-                </div>
-              </div>
-              <div class="u-align-left u-container-style u-layout-cell u-size-30 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-2">
-                  <div class="u-border-1 u-border-grey-75 u-border-no-left u-border-no-right u-container-style u-expanded-width u-group u-shape-rectangle u-group-1">
-                    <div class="u-container-layout u-container-layout-3">
-                      <h4 class="u-text u-text-2">9</h4>
-                      <h4 class="u-text u-text-3">부아아아아앙아아ㅇ</h4>
-                      <h4 class="u-text u-text-4">비둘기</h4>
-                      <h4 class="u-text u-text-5">00/00/00</h4>
-                    </div>
+                  <div class="u-form u-form-1">
+                    <form action="#" method="POST" class="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form" source="custom" name="form" style="padding: 10px;">
+                      <div class="u-form-group u-form-name">
+                        <label for="name-f9ba" class="u-label">검색</label>
+                        <input type="text" id="name-f9ba" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+                      </div>
+                      <div class="u-align-right u-form-group u-form-submit">
+                        <a href="#" class="u-btn u-btn-submit u-button-style">검색<br>
+                        </a>
+                        <input type="submit" value="submit" class="u-form-control-hidden">
+                      </div>
+                      <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+                      <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+                      <input type="hidden" value="" name="recaptchaResponse">
+                    </form>
                   </div>
-                  <div class="u-border-2 u-border-grey-60 u-border-no-left u-border-no-right u-container-style u-expanded-width u-grey-5 u-group u-shape-rectangle u-group-2">
-                    <div class="u-container-layout u-container-layout-4">
-                      <h4 class="u-text u-text-default u-text-6">작성날자</h4>
-                      <h4 class="u-text u-text-default u-text-7">글쓴이</h4>
-                      <h4 class="u-text u-text-default u-text-8">NO</h4>
-                      <h4 class="u-text u-text-default u-text-9">제목</h4>
-                    </div>
+                  <div class="u-expanded-width u-table u-table-responsive u-table-1">
+                    <table class="u-table-entity">
+                      <colgroup>
+                        <col width="8%">
+                        <col width="44.7%">
+                        <col width="16.6%">
+                        <col width="15.5%">
+                        <col width="15.2%">
+                      </colgroup>
+                      <thead class="u-grey-50 u-table-header u-table-header-1">
+                        <tr style="height: 46px;">
+                          <th class="u-border-1 u-border-grey-50 u-table-cell">NO</th>
+                          <th class="u-border-1 u-border-grey-50 u-table-cell">제목</th>
+                          <th class="u-border-1 u-border-grey-50 u-table-cell">글쓴이</th>
+                          <th class="u-border-1 u-border-grey-50 u-table-cell">작성날자</th>
+                          <th class="u-border-1 u-border-grey-50 u-table-cell">조회수</th>
+                        </tr>
+                      </thead>
+                      <tbody class="u-table-body">
+                      
+                        <c:forEach var="dto" items="${dtos}">
+                          <tr style="height: 46px;cursor:pointer;" onclick="location.href='freeBoardContent.b?boardId=${dto.boardId}'" >
+                            <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">${dto.boardId}</td>
+                            <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">${dto.title}</td>
+                            <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">${dto.userId}</td>
+                            <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">${dto.day}</td>
+                            <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">${dto.hit}</td>
+                          </tr>
+                        </c:forEach>
+                      </tbody>
+                    </table>  
                   </div>
-                  <div class="u-border-1 u-border-grey-75 u-border-no-left u-border-no-right u-container-style u-expanded-width u-group u-shape-rectangle u-group-3">
-                    <div class="u-container-layout u-container-layout-5">
-                      <h4 class="u-text u-text-10">8</h4>
-                      <h4 class="u-text u-text-11">부아아아아앙아아ㅇ</h4>
-                      <h4 class="u-text u-text-12">비둘기</h4>
-                      <h4 class="u-text u-text-13">00/00/00</h4>
-                    </div>
-                  </div>
-                  <div class="u-border-1 u-border-grey-75 u-border-no-left u-border-no-right u-container-style u-expanded-width u-group u-shape-rectangle u-group-4">
-                    <div class="u-container-layout u-container-layout-6">
-                      <h4 class="u-text u-text-14">7</h4>
-                      <h4 class="u-text u-text-15">부아아아아앙아아ㅇ</h4>
-                      <h4 class="u-text u-text-16">비둘기</h4>
-                      <h4 class="u-text u-text-17">00/00/00</h4>
-                    </div>
-                  </div>
-                  <div class="u-border-1 u-border-grey-75 u-border-no-left u-border-no-right u-container-style u-expanded-width u-group u-shape-rectangle u-group-5">
-                    <div class="u-container-layout u-container-layout-7">
-                      <h4 class="u-text u-text-18">6</h4>
-                      <h4 class="u-text u-text-19">부아아아아앙아아ㅇ</h4>
-                      <h4 class="u-text u-text-20">비둘기</h4>
-                      <h4 class="u-text u-text-21">00/00/00</h4>
-                    </div>
-                  </div>
-                  <div class="u-border-1 u-border-grey-75 u-border-no-left u-border-no-right u-container-style u-expanded-width u-group u-shape-rectangle u-group-6">
-                    <div class="u-container-layout u-container-layout-8">
-                      <h4 class="u-text u-text-22">5</h4>
-                      <h4 class="u-text u-text-23">부아아아아앙아아ㅇ</h4>
-                      <h4 class="u-text u-text-24">비둘기</h4>
-                      <h4 class="u-text u-text-25">00/00/00</h4>
-                    </div>
-                  </div>
-                  <div class="u-border-1 u-border-grey-75 u-border-no-left u-border-no-right u-container-style u-expanded-width u-group u-shape-rectangle u-group-7">
-                    <div class="u-container-layout u-container-layout-9">
-                      <h4 class="u-text u-text-26">4</h4>
-                      <h4 class="u-text u-text-27">부아아아아앙아아ㅇ</h4>
-                      <h4 class="u-text u-text-28">비둘기</h4>
-                      <h4 class="u-text u-text-29">00/00/00</h4>
-                    </div>
-                  </div>
-                  <div class="u-border-1 u-border-grey-75 u-border-no-left u-border-no-right u-container-style u-expanded-width u-group u-shape-rectangle u-group-8">
-                    <div class="u-container-layout u-container-layout-10">
-                      <h4 class="u-text u-text-30">3</h4>
-                      <h4 class="u-text u-text-31">부아아아아앙아아ㅇ</h4>
-                      <h4 class="u-text u-text-32">비둘기</h4>
-                      <h4 class="u-text u-text-33">00/00/00</h4>
-                    </div>
-                  </div>
-                  <div class="u-border-1 u-border-grey-75 u-border-no-left u-border-no-right u-container-style u-expanded-width u-group u-shape-rectangle u-group-9">
-                    <div class="u-container-layout u-container-layout-11">
-                      <h4 class="u-text u-text-34">2</h4>
-                      <h4 class="u-text u-text-35">부아아아아앙아아ㅇ</h4>
-                      <h4 class="u-text u-text-36">비둘기</h4>
-                      <h4 class="u-text u-text-37">00/00/00</h4>
-                    </div>
-                  </div>
-                  <div class="u-border-1 u-border-grey-75 u-border-no-left u-border-no-right u-container-style u-expanded-width u-group u-shape-rectangle u-group-10">
-                    <div class="u-container-layout u-container-layout-12">
-                      <h4 class="u-text u-text-38">1</h4>
-                      <h4 class="u-text u-text-39">부아아아아앙아아ㅇ</h4>
-                      <h4 class="u-text u-text-40">비둘기</h4>
-                      <h4 class="u-text u-text-41">00/00/00</h4>
-                    </div>
-                  </div>
-                  <a href="https://nicepage.com/landing-page" class="u-btn u-button-style u-btn-1">글쓰기</a>
+                  <a href="https://nicepage.com/landing-page" class="u-btn u-btn-round u-button-style u-radius-10 u-btn-2">글쓰기</a>
                 </div>
               </div>
             </div>

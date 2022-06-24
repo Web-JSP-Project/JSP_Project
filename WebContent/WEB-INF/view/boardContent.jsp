@@ -49,12 +49,12 @@
                     <div class="u-container-layout u-valign-bottom u-container-layout-2">
                       <div class="u-border-2 u-border-grey-75 u-border-no-left u-border-no-right u-border-no-top u-container-style u-expanded-width u-grey-10 u-group u-group-2">
                         <div class="u-container-layout u-container-layout-3">
-                          <h4 class="u-text u-text-default u-text-1">글제목은 여기에에에에에ㅔㅇ</h4>
-                          <h6 class="u-text u-text-default u-text-2">00/00/00</h6>
-                          <h6 class="u-text u-text-default u-text-3">닉네임000</h6>
+                          <h4 class="u-text u-text-default u-text-1">${dto.title }</h4>
+                          <h6 class="u-text u-text-default u-text-2">${dto.day }</h6>
+                          <h6 class="u-text u-text-default u-text-3">${dto.userId }</h6>
                         </div>
                       </div>
-                      <h5 class="u-text u-text-4">&nbsp;Headlineaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h5>
+                      <h5 class="u-text u-text-4">${dto.content }</h5>
                       <div class="u-border-2 u-border-black u-border-no-bottom u-border-no-left u-border-no-right u-container-style u-expanded-width u-grey-10 u-group u-group-3">
                         <div class="u-container-layout u-container-layout-4">
                           <a href="https://nicepage.com/website-builder" class="u-btn u-btn-round u-button-style u-radius-10 u-btn-1">수정</a>

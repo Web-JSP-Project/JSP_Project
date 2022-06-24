@@ -14,6 +14,7 @@ public class IndexControler extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//메인 화면 컨트롤러
 		String viewPage = null;
 		response.setContentType("text/html; charset=UTF-8");
 		String uri = request.getRequestURI();

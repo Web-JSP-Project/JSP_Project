@@ -1,6 +1,7 @@
 package com.dto;
 
 public class FaqDto {
+	// 자주묻는 질문 정보
 	int faqid;
 	String title;
 	String content;

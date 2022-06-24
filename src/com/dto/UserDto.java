@@ -1,6 +1,7 @@
 package com.dto;
 
 public class UserDto {
+	// 사용자 정보
 	private String id;
 	private String pwd;
 	private String nickName;

@@ -22,6 +22,7 @@ public class GameContentDao {
 	}
 
 	public GameContentDto select(String gameId) {
+		//게임 상세 검색
 		GameContentDto dto = new GameContentDto();
 		String sql = "SELECT g.gameid, i.itemName, i.f1name, i.f2name, "
 				+ "g.gameName, g.genre, g.youtubeLink, g.gameDate, g.ration, g.price, g.gameExplain, "

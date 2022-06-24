@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
   <!DOCTYPE html>
-<!DOCTYPE html>
+
 <html style="font-size: 16px;">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -91,7 +91,7 @@
                           <input type="hidden" value="" name="recaptchaResponse">
                         </form>
                       </div>
-                      <p class="u-align-center u-large-text u-text u-text-default u-text-variant u-text-1">가격순</p>
+                      <p class="u-align-center u-large-text u-text u-text-default u-text-variant u-text-1">목록</p>
 
 
 
@@ -100,7 +100,8 @@
 	                      <a href="storeContent.g?gameId=${dto.gameId}">
 	                        <div class="u-align-center u-container-style u-grey-10 u-group u-group-2">
 	                          <div class="u-container-layout u-container-layout-3">
-	                            <img class="u-image u-image-round u-preserve-proportions u-radius-10 u-image-1" src="${pageContext.request.contextPath}/gameImg/${dto.img}" alt="" data-image-width="184" data-image-height="89">
+	                            <img class="u-image u-image-round u-preserve-proportions u-radius-10 u-image-1" 
+	                            src="${pageContext.request.contextPath}/gameImg/${dto.img}" alt="" data-image-width="184" data-image-height="89">
 	                            <h5 class="u-text u-text-default u-text-2">${dto.title}</h5>
 	                            <h6 class="u-text u-text-default u-text-3">&#8361; ${dto.price}</h6>
 	                          </div>

@@ -10,8 +10,8 @@
     <title>라이브러리 홈</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/nicepageOn.css" media="screen">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/library.css" media="screen">
-    <script class="u-script" type="text/javascript" src="${pageContext.request.contextPath}/css/javaScript/jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="${pageContext.request.contextPath}/css/javaScript/nicepage.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="${pageContext.request.contextPath}/javaScript/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="${pageContext.request.contextPath}/javaScript/nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 4.12.21, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
@@ -36,9 +36,11 @@
           <div class="u-gutter-0 u-layout">
             <div class="u-layout-row">
               <div class="u-container-style u-grey-10 u-layout-cell u-size-11 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <h6 class="u-text u-text-1">------게임이름--</h6>
-                </div>
+                <ul>
+                	<c:forEach var="dto" items="${libraryDtos}">
+                  		<a href="#" style="color: #000;"><li>${dto.gameName}</li></a>
+                     </c:forEach>
+                </ul>
               </div>
               <div class="u-container-style u-layout-cell u-size-49 u-layout-cell-2">
                 <div class="u-container-layout u-container-layout-2">

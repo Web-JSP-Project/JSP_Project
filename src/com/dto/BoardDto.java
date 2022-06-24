@@ -1,9 +1,9 @@
 package com.dto;
-
-import java.sql.Date;
+	
 import java.sql.Timestamp;
 
 public class BoardDto {
+	// 게시판 정보
 	int boardId;
 	String title;
 	String content;

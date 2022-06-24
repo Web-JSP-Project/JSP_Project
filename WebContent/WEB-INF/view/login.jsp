@@ -51,7 +51,7 @@
                       </div>
                       <div class="u-form-group">
                         <label for="email-78e2" class="u-label">비밀번호</label>
-                        <input type="text" placeholder="password" id="email-78e2" name="pwd" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-radius-10 u-white" required="required">
+                        <input type="password" placeholder="password" id="email-78e2" name="pwd" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-radius-10 u-white" required="required">
                       </div>
                       <button type="submit"  class="u-black u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-grey-60 u-radius-10 u-btn-1">로그인</button>
                     </form>

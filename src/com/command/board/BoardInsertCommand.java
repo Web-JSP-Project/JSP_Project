@@ -1,4 +1,4 @@
-package com.command;
+package com.command.board;
 
 public class BoardInsertCommand {
 

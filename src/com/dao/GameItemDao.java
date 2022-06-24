@@ -22,6 +22,7 @@ public class GameItemDao {
 	}
 
 	public ArrayList<GameItemDto> selectAll() {
+		// 모든게임 검색
 		ArrayList<GameItemDto> dtos = new ArrayList<GameItemDto>();
 		String sql = "SELECT g.gameid, i.itemName, g.gameName, g.price "
 				+ "FROM game g JOIN gameimg i ON g.gameid = i.gameid;";

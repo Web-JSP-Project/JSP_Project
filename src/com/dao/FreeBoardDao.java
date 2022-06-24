@@ -23,6 +23,7 @@ public class FreeBoardDao {
 		return con;
 	}
 	public void insert(BoardDto dto) {
+		//자유게시판 추가
 		String sql = "INSERT INTO freeboard(title, content, userid) VALUES(?,?,?);";
 		try (
 			Connection con = getConnection();
@@ -38,8 +39,10 @@ public class FreeBoardDao {
 		}
 	}
 	public ArrayList<BoardDto> selectAll() {
+		//자유게시판 전부 검색
 		ArrayList<BoardDto> dtos = new ArrayList<BoardDto>();
-		String sql = "SELECT * FROM freeBoard;";
+		String sql = "SELECT b.freeBoardid, b.title, b.content, b.hit, b.freeBoardDay, u.nickName"
+					+" FROM freeboard b JOIN user u ON b.userid = u.id;";
 		try (
 			Connection con = getConnection();
 			Statement stmt = con.createStatement();
@@ -52,7 +55,7 @@ public class FreeBoardDao {
 				dto.setContent(rs.getString("content"));
 				dto.setDay(rs.getTimestamp("freeBoardDay"));
 				dto.setHit(rs.getInt("hit"));
-				dto.setUserId(rs.getString("userid"));
+				dto.setUserId(rs.getString("nickName"));
 				dtos.add(dto);
 			}
 			
@@ -62,8 +65,11 @@ public class FreeBoardDao {
 		return dtos;
 	}
 	public BoardDto select(int boardId) {
+		// 자유게시판 하나 검색
 		BoardDto dto = new BoardDto();
-		String sql = "SELECT * FROM freeBoard where freeBoardid='"+boardId+"';";
+		String sql = "SELECT b.freeBoardid, b.title, b.content, b.hit, b.freeBoardDay, u.nickName "
+				+ "FROM freeboard b JOIN user u ON b.userid = u.id "
+				+ "where freeBoardid='"+boardId+"';";
 		try (
 			Connection con = getConnection();
 			Statement stmt = con.createStatement();
@@ -75,7 +81,7 @@ public class FreeBoardDao {
 				dto.setContent(rs.getString("content"));
 				dto.setDay(rs.getTimestamp("freeBoardDay"));
 				dto.setHit(rs.getInt("hit"));
-				dto.setUserId(rs.getString("userid"));
+				dto.setUserId(rs.getString("nickName"));
 			}
 			
 		} catch (Exception e) {
@@ -84,6 +90,7 @@ public class FreeBoardDao {
 		return dto;
 	}
 	public void delete(int boardId) {
+		//자유게시판 삭제
 		String sql = "delete FreeBoard where freeBoardid = ?;";
 		try (
 			Connection con = getConnection();

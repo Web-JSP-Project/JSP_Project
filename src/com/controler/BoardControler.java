@@ -10,7 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.command.BoardCommand;
-import com.command.BoardSelectCommand;
+import com.command.board.BoardContentCommand;
+import com.command.board.BoardSelectCommand;
 import com.dao.FreeBoardDao;
 
 @WebServlet("*.b")
@@ -18,6 +19,7 @@ public class BoardControler extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//게시판 관련 컨트롤러
 		String viewPage = null;
 		response.setContentType("text/html; charset=UTF-8");
 		String uri = request.getRequestURI();
@@ -29,8 +31,18 @@ public class BoardControler extends HttpServlet {
 			freeBoardSelect.execute(request, response);
 			viewPage="WEB-INF/view/freeBoard.jsp";
 			break;
+		case "QnA":
+			BoardCommand qnaSelect = new BoardSelectCommand();
+			qnaSelect.execute(request, response);
+			viewPage="WEB-INF/view/freeBoard.jsp";
+			break;
 		case "dataBoard":
 			viewPage="WEB-INF/view/dataBoard.jsp";
+			break;
+		case "freeBoardContent":
+			BoardCommand boardContent = new BoardContentCommand();
+			boardContent.execute(request, response);
+			viewPage="WEB-INF/view/boardContent.jsp";
 			break;
 		}
 

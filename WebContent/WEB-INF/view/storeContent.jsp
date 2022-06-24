@@ -138,7 +138,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                       <h5 class="u-text u-text-7">&#8361; ${dto.price }</h5>
                     </div>
                   </div>
-                  <a href="https://nicepage.com/web-design" class="u-black u-border-none u-btn u-btn-round u-button-style u-hover-grey-60 u-radius-6 u-btn-1">구매하기</a>
+                  <a href="buySelect.p?id=${dto.gameId }" class="u-black u-border-none u-btn u-btn-round u-button-style u-hover-grey-60 u-radius-6 u-btn-1">구매하기</a>
                 </div>
               </div>
               <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-2">

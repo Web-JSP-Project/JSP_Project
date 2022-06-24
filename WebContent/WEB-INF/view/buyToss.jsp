@@ -9,7 +9,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>구매 Toss</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/nicepage.css" media="screen">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/nicepageOn.css" media="screen">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/buyToss.css" media="screen">
     <script class="u-script" type="text/javascript" src="${pageContext.request.contextPath}/javaScript/jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="${pageContext.request.contextPath}/javaScript/nicepage.js" defer=""></script>
@@ -38,18 +38,8 @@
                   <div class="u-container-style u-expanded-width u-grey-10 u-group u-group-1">
                     <div class="u-container-layout u-container-layout-2">
                       <div class="u-form u-form-1">
-                        <form action="#" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 10px;">
-                          <div class="u-form-group u-form-select u-form-group-1">
-                            <label for="select-7171" class="u-label">Select</label>
-                            <div class="u-form-select-wrapper">
-                              <select id="select-7171" name="select" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
-                                <option value="신용카드">신용카드</option>
-                                <option value="Toss">Toss</option>
-                                <option value="문화상품권">문화상품권</option>
-                              </select>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
-                            </div>
-                          </div>
+                        <form action="buy.p" method="POST"name="form" style="padding: 10px;">
+                          
                           <div class="u-form-group u-form-phone">
                             <label for="name-7ea1" class="u-label">전화번호</label>
                             <input type="tel" id="name-7ea1" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">

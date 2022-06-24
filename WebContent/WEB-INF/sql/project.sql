@@ -18,7 +18,7 @@ CREATE TABLE user(
 	email VARCHAR(50) NOT NULL,
 	birth DATE NOT NULL,
 	joinday timestamp not null default NOW(),
-	profileImg VARCHAR(30)
+	profileImg VARCHAR(30) not null DEFAULT 'profile/icona.png'
 );
 CREATE TABLE game(
 	gameid INTEGER(3) NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -46,6 +46,17 @@ CREATE TABLE recommend(
 	DISK VARCHAR(30),
 	FOREIGN KEY(gameid) REFERENCES game(gameid)
 );
+CREATE TABLE gamePlay(
+	playId INTEGER(3) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	userid VARCHAR(30) NOT NULL,
+	gameid INTEGER(3) NOT null,
+	installChack BOOLEAN NOT NULL DEFAULT FALSE,
+	lastPlay DATE,
+	playTime INT(5) NOT NULL DEFAULT 0,
+	FOREIGN KEY(userid) REFERENCES user(id),
+	FOREIGN KEY(gameid) REFERENCES game(gameid)
+	
+);
 CREATE TABLE gameImg(
 	imgId INTEGER(3) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	gameid INTEGER(3),
@@ -66,7 +77,7 @@ CREATE TABLE faq(
 	faqid INTEGER(3) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	title VARCHAR(100) NOT NULL,
 	content VARCHAR(1000) NOT NULL,
-	COMMENT VARCHAR(1000) NOT NULL
+	COMMENT VARCHAR(1000)
 );
 CREATE TABLE qna(
 	qnaid INTEGER(3) NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -126,8 +137,10 @@ SELECT * FROM gameimg;
 SELECT * FROM library;
 SELECT * FROM freeboard;
 SELECT * FROM faq;
+SELECT * FROM gameplay;
 
 DESC game;
+USE projectdb;
 
 UPDATE game SET youtubeLink="https://www.youtube.com/embed/e5wwSxl0atc?playlist=e5wwSxl0atc&amp;loop=1&amp;mute=1&amp;showinfo=0&amp;controls=0&amp;start=0&amp;autoplay=1"
 WHERE gameid = 1;
@@ -259,10 +272,13 @@ INSERT INTO library(userid, gameid) VALUES('admin',1);
 INSERT INTO library(userid, gameid) VALUES('admin',2);
 INSERT INTO library(userid, gameid) VALUES('admin',4);
 
-INSERT INTO freeboard(title, content, userid) VALUES(?,?,?);
+INSERT INTO freeboard(title, content, userid) VALUES('','','');
+INSERT INTO freeboard(title, content, userid) VALUES('관리자입니다','이쁜말을 씁시다','admin');
+INSERT INTO freeboard(title, content, userid) VALUES('공지는 없습니다다','알아서 잘 할거라 믿습니다','admin');
 
-SELECT * FROM user WHERE id = 'admin' AND pwd='root';
-
+SELECT * FROM user;
+SELECT * FROM freeboard;
+SELECT * FROM freeBoard;
 SELECT * FROM user;
 
 SELECT * FROM FILE;
@@ -307,6 +323,13 @@ WHERE g.gameid IN(
 ;
 
 
+SELECT b.freeBoardid, b.title, b.content, b.hit, b.freeBoardDay, u.nickName
+FROM freeboard b JOIN user u ON b.userid = u.id
+where freeBoardid='3';
+
+
+SELECT b.freeBoardid, b.title, b.content, b.hit, b.freeBoardDay, u.nickName
+FROM freeboard b JOIN user u ON b.userid = u.id;
 
 SELECT b.freeboardid, b.title, b.content, b.freeBoardDay, b.hit, u.nickName
 FROM freeboard b JOIN user u ON b.userid = u.id

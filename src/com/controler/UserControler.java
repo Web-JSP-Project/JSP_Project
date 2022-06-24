@@ -10,14 +10,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.command.UserCommand;
-import com.command.UserInsertCommand;
-import com.command.UserSelectCommand;
+import com.command.user.UserInsertCommand;
+import com.command.user.UserSelectCommand;
 
 @WebServlet("*.u")
 public class UserControler extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// 사용자 관련 컨트롤러
 		String viewPage = null;
 		response.setContentType("text/html; charset=UTF-8");
 		String uri = request.getRequestURI();
@@ -30,6 +31,7 @@ public class UserControler extends HttpServlet {
 		case "userSelect":
 			UserCommand userSelect = new UserSelectCommand();
 			userSelect.execute(request, response); 
+			// 로그인 성공 체크
 			if(request.getSession().getAttribute("nickName") != null) {
 				viewPage="WEB-INF/view/index.jsp";				
 			}

@@ -1,6 +1,7 @@
 package com.dto;
 
 public class GameItemDto {
+	//게임 목록 정보
 	int gameId;
 	String img;
 	String title;

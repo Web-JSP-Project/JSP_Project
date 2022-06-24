@@ -10,15 +10,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.command.GameContentCommand;
-import com.command.GameContentSelectCommand;
 import com.command.GameItemCommand;
-import com.command.GameItemSelectAllCommand;
+import com.command.LibraryCommand;
+import com.command.game.GameContentSelectCommand;
+import com.command.game.GameItemSelectAllCommand;
+import com.command.game.LibrarySelectAllCommand;
 
 @WebServlet("*.g")
 public class GameControler extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//게임 관련 컨트롤러
 		String viewPage = null;
 		response.setContentType("text/html; charset=UTF-8");
 		String uri = request.getRequestURI();
@@ -34,6 +37,20 @@ public class GameControler extends HttpServlet {
 			GameContentCommand gameContentSelect = new GameContentSelectCommand();
 			gameContentSelect.execute(request, response);
 			viewPage="WEB-INF/view/storeContent.jsp";
+			break;
+		case "library":
+			//로그인이 체크
+			if(request.getSession().getAttribute("nickName") != null) {
+				LibraryCommand library = new LibrarySelectAllCommand();				
+				library.execute(request, response);
+				viewPage="WEB-INF/view/library.jsp";
+			}
+			else {
+				viewPage = "login.u";
+			}
+			break;
+		case "libraryContent":
+			viewPage="WEB-INF/view/libraryContent.jsp";
 			break;
 		}
 

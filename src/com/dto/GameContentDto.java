@@ -1,6 +1,7 @@
 package com.dto;
 
 public class GameContentDto {
+	// 게임 상세 정보
 	int gameId;
 	String itemSrc;
 	String f1Src;

@@ -35,7 +35,7 @@
 						</li>
 						<li class="u-nav-item"><a
 								class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base"
-								href="library.l" style="padding: 10px;">라이브러리</a></li>
+								href="library.g" style="padding: 10px;">라이브러리</a></li>
 						<li class="u-nav-item"><a href="freeBoard.b"
 								class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base"
 								style="padding: 10px;">게시판</a>
@@ -77,7 +77,7 @@
 										</ul>
 									</div>
 								</li>
-								<li class="u-nav-item"><a class="u-button-style u-nav-link" href="library.l">라이브러리</a>
+								<li class="u-nav-item"><a class="u-button-style u-nav-link" href="library.g">라이브러리</a>
 								</li>
 								<li class="u-nav-item"><a class="u-button-style u-nav-link" href="freeBoard.b">게시판</a>
 									<div class="u-nav-popup">

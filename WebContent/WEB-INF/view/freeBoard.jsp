@@ -87,23 +87,18 @@
                       <tbody class="u-table-body">
                       
                         <c:forEach var="dto" items="${dtos}">
-                        <a href="boardContent.b?boardId=${dto.boardId}">
-                          <tr style="height: 46px;">
-                          
+                          <tr style="height: 46px;cursor:pointer;" onclick="location.href='freeBoardContent.b?boardId=${dto.boardId}'" >
                             <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">${dto.boardId}</td>
                             <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">${dto.title}</td>
                             <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">${dto.userId}</td>
                             <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">${dto.day}</td>
                             <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">${dto.hit}</td>
                           </tr>
-                          </a>
                         </c:forEach>
-                        
                       </tbody>
                     </table>
                   </div>
                   <a href="https://nicepage.com/landing-page" class="u-btn u-btn-round u-button-style u-radius-10 u-btn-2">글쓰기</a>
-                  <h6 class="u-text u-text-default u-text-2">1,2,3,4,5,6,7,8,9,10</h6>
                 </div>
               </div>
             </div>

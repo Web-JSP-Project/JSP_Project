@@ -1,4 +1,4 @@
-package com.command;
+package com.command.game;
 
 public class LibrarySelectCommand {
 
